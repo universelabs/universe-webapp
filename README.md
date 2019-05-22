@@ -1,18 +1,18 @@
 <div align="center">
-  <h3>Universe website and web app</h3>
+  <h3>Universe key management web app</h3>
   <p>
-    Universe is an open source, blockchain agnostic web3 access node network.
+    Universe is a usability and custody solutions layer for decentralized platforms.
     <br/>
     <a href="https://universe.engineering">
       <strong>universe.engineering</strong>
     </a>
   </p>
   <p>
-    <a href="https://github.com/universelabs/universe.engineering/issues/new?labels=&template=bug_report.md" alt="Report a Bug (universe.engineering)">
+    <a href="https://github.com/universelabs/universe-webapp/issues/new?labels=&template=bug_report.md" alt="Report a Bug (universe.engineering)">
       Report bug
     </a>
     &middot;
-    <a href="https://github.com/universelabs/universe.engineering/issues/new?labels=&template=feature_request.md" alt="Request feature (universe.engineering)">
+    <a href="https://github.com/universelabs/universe-webapp/issues/new?labels=&template=feature_request.md" alt="Request feature (universe.engineering)">
       Request feature
     </a>
     &middot;
@@ -29,20 +29,13 @@
       <img src="https://img.shields.io/twitter/url/https/twitter.com/universelabs.svg?style=social&label=Follow%20%40universelabs&logo=twitter" alt="follow on Twitter" />
     </a>
     &middot;
-    <a href="https://github.com/universelabs/universe.engineering/stargazers">
-      <img src="https://img.shields.io/github/stars/universelabs/universe.engineering.svg?style=social&label=Star&maxAge=2592000" alt="Star Repo" />
+    <a href="https://github.com/universelabs/universe-webapp/stargazers">
+      <img src="https://img.shields.io/github/stars/universelabs/universe-webapp.svg?style=social&label=Star&maxAge=2592000" alt="Star Repo" />
     </a>
   </p>
 </div>
-<br/>
-<p align="center">
-  <a href="https://universe.engineering">
-    <img width="700" alt="universe.engineering-v1.7.1" src="https://user-images.githubusercontent.com/1711854/53524076-8021de80-3aac-11e9-87c0-7c3f608a5503.png">
-  </a>
-</p>
 
 <br/>
-
 
 ## Table of contents
 
@@ -55,32 +48,29 @@
 - [Maintainers](#maintainers)
 - [License](#license)
 
-
 ## Quick start
 
-1. Quickly start by cloning the repository to your local machine `git clone git@github.com:universelabs/universe.engineering.git`.
+1. Quickly start by cloning the repository to your local machine `git clone git@github.com:universelabs/universe-webapp.git`.
 2. Ensure you have [`npm`](https://www.npmjs.com/get-npm) installed. `npm` comes bundled with [Node.js](https://nodejs.org/en/download/package-manager/). `brew install node`.
 3. Add dependencies for both the back-end and client servers `npm install`.
 4. Start the local back-end and client side server and run the app. The app will automatically open your web browser and navigate to http://localhost:3000/ for you `npm run dev`.
 
-
 ## Status
 
 [![Slack](https://img.shields.io/badge/Community-Join_the_Slack!-purple.svg?colorA=212121&colorB=3f46ad)](https://join.slack.com/t/universelabs/shared_invite/enQtNDQ0MjY3NDI5MTkwLTIzMWQ4M2U3MGQ3ZDY5MzM5MGQ5ZDM1MDZjNTgwNGI5NDdiNDY4ZDQyNWI2NjEzZmU3NzVmOTYwYzEzYzc1ZDE)
-[![universe.engineering server version](https://img.shields.io/badge/dynamic/json.svg?label=Server+version&url=https%3A%2F%2Fraw.githubusercontent.com%2Funiverselabs%2Funiverse.engineering%2Fmaster%2Fpackage.json&query=%24.version&colorA=%23212121&colorB=%2300BB00)](https://github.com/universelabs/universe.engineering/blob/master/package.json)
-[![universe.engineering client version](https://img.shields.io/badge/dynamic/json.svg?label=Client+version&url=https%3A%2F%2Fraw.githubusercontent.com%2Funiverselabs%2Funiverse.engineering%2Fmaster%2Fclient%2Fpackage.json&query=%24.version&colorA=%23212121&colorB=%2300BB00)](https://github.com/universelabs/universe.engineering/blob/master/client/package.json)
-[![Build status](https://img.shields.io/circleci/project/github/universelabs/universe.engineering.svg?label=Build+status&colorA=%23212121)](https://circleci.com/gh/universelabs/universe.engineering)
-[![dependencies status](https://img.shields.io/david/universelabs/universe.engineering.svg?label=dependencies&colorA=%23212121)](https://david-dm.org/universelabs/universe.engineering)
-[![devDependencies status](https://img.shields.io/david/dev/universelabs/universe.engineering.svg?label=devDependencies&colorA=%23212121)](https://david-dm.org/universelabs/universe.engineering?type=dev)
-[![Repository Size](https://img.shields.io/github/repo-size/universelabs/universe.engineering.svg?label=Repository+Size&colorA=%23212121&colorB=%23007BFF)](https://github.com/universelabs/universe.engineering)
-
+[![universe-webapp server version](https://img.shields.io/badge/dynamic/json.svg?label=Server+version&url=https%3A%2F%2Fraw.githubusercontent.com%2Funiverselabs%2Funiverse-webapp%2Fmaster%2Fpackage.json&query=%24.version&colorA=%23212121&colorB=%2300BB00)](https://github.com/universelabs/universe-webapp/blob/master/package.json)
+[![universe-webapp client version](https://img.shields.io/badge/dynamic/json.svg?label=Client+version&url=https%3A%2F%2Fraw.githubusercontent.com%2Funiverselabs%2Funiverse-webapp%2Fmaster%2Fclient%2Fpackage.json&query=%24.version&colorA=%23212121&colorB=%2300BB00)](https://github.com/universelabs/universe-webapp/blob/master/client/package.json)
+[![Build status](https://img.shields.io/circleci/project/github/universelabs/universe-webapp.svg?label=Build+status&colorA=%23212121)](https://circleci.com/gh/universelabs/universe-webapp)
+[![dependencies status](https://img.shields.io/david/universelabs/universe-webapp.svg?label=dependencies&colorA=%23212121)](https://david-dm.org/universelabs/universe-webapp)
+[![devDependencies status](https://img.shields.io/david/dev/universelabs/universe-webapp.svg?label=devDependencies&colorA=%23212121)](https://david-dm.org/universelabs/universe-webapp?type=dev)
+[![Repository Size](https://img.shields.io/github/repo-size/universelabs/universe-webapp.svg?label=Repository+Size&colorA=%23212121&colorB=%23007BFF)](https://github.com/universelabs/universe-webapp)
 
 ## Getting started
 
 Quickly start by cloning the repository to your local machine
 
 ```
-$ git clone git@github.com:universelabs/universe.engineering.git
+$ git clone git@github.com:universelabs/universe-webapp.git
 ```
 
 Install [`npm`](https://www.npmjs.com/get-npm). `npm` is installed and comes bundled with [Node.js](https://nodejs.org/en/download/package-manager/)
@@ -92,7 +82,7 @@ $ brew install node
 Add dependencies for the [Express.js](https://expressjs.com/) server
 
 ```
-$ cd universe.engineering
+$ cd universe-webapp
 $ npm install
 ```
 
@@ -103,7 +93,7 @@ $ cd client
 $ npm install
 ```
 
-Go back to the server 
+Go back to the server
 
 ```
 $ cd ../
@@ -117,14 +107,12 @@ $ npm run dev
 
 The app will and automatically start the Node/Express server on port http://localhost:5000/ as well as the client side server on port http://localhost:3000/. The app will also listen for changes and update automatically.
 
-
 ## Contributing
 
 Please read through our [contributing guidelines](https://github.com/universelabs/universe/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
 Moreover, if your pull request contains JavaScript patches or features, you
 must include relevant unit tests. All code should conform to the [Code Guidelines](https://github.com/universelabs/universe/blob/master/CONTRIBUTING.md#code-guidelines).
-
 
 ## Roadmap
 
@@ -134,23 +122,31 @@ Universe Labs' mission is to become the largest open source node and key managem
 
 View the Universe Roadmap to learn more about project overview, goals, execution to date, milestones, current tech stack, and more...
 
-
 ## Community
 
 Get updates on Universe's development and chat with the project maintainers and community members.
 
 - Subscribe to the [Universe Newsletter](http://universe.engineering/subscribe)
-- [Star this repo](https://github.com/universelabs/universe/stargazers)
+- [Star the repo](https://github.com/universelabs/universe/stargazers)
 - Follow [@universelabs](https://twitter.com/universelabs) on Twitter.
 - Join the official Universe [Slack](https://join.slack.com/t/universelabs/shared_invite/enQtNDQ0MjY3NDI5MTkwLTIzMWQ4M2U3MGQ3ZDY5MzM5MGQ5ZDM1MDZjNTgwNGI5NDdiNDY4ZDQyNWI2NjEzZmU3NzVmOTYwYzEzYzc1ZDE).
-
 
 ## Maintainers
 
 **Guy Lepage**
+
 - <https://twitter.com/guylepage3>
 - <https://github.com/guylepage3>
 
+**Dan Trevino**
+
+- <https://twitter.com/dantrevino>
+- <https://github.com/dantrevino>
+
+**Jacob Gadakian**
+
+- <https://twitter.com/gadikian>
+- <https://github.com/faddat>
 
 ## License
 
