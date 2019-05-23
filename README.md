@@ -1,5 +1,5 @@
 <div align="center">
-  <h3>Universe key management web app</h3>
+  <h3>Universe key management web client</h3>
   <p>
     Universe is a usability and custody solutions layer for decentralized platforms.
     <br/>
