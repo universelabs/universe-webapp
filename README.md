@@ -143,6 +143,10 @@ Get updates on Universe's development and chat with the project maintainers and 
 - <https://twitter.com/dantrevino>
 - <https://github.com/dantrevino>
 
+**Modestos Kaffes**
+- <https://twitter.com/modkaffes>
+- <https://github.com/modkaffes>
+
 **Jacob Gadakian**
 
 - <https://twitter.com/gadikian>
