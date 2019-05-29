@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import Home from './containers/Home';
-import Dashboard from './containers/Dashboard';
-import Roadmap from './containers/Roadmap';
 import SignUp from './containers/SignUp';
+import Dashboard from './containers/Dashboard';
 import Contact from './containers/Contact';
 import Help from './containers/Help';
 import NoMatch from './containers/NoMatch';
@@ -32,10 +30,8 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/dashboard" component={Dashboard} />
-            <Route path="/roadmap" component={Roadmap} />
             <Route path="/sign-up" component={SignUp} />
+            <Route path="/" component={Dashboard} />
             <Route path="/contact" component={Contact} />
             <Route path="/help" component={Help} />
             <Route path="/subscribe" component={Subscribe} />
