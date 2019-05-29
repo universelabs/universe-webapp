@@ -1,7 +1,7 @@
 <div align="center">
   <h3>Universe key management web client</h3>
   <p>
-    Universe is a usability and custody solutions layer for decentralized platforms.
+    Universe is a key management software solution for decentralized platforms.
     <br/>
     <a href="https://universe.engineering">
       <strong>universe.engineering</strong>
