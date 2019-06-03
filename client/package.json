@@ -25,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "mock-server": "json-server --watch --port 4000 ./src/api/db.json"
   },
   "proxy": "http://localhost:5000",
   "dependencies": {
