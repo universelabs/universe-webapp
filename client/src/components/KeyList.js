@@ -1,41 +1,54 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
+import Accordion, { AccordionItem } from './Accordion';
 
-class KeyList extends Component {
-  state = {
-    data: [
-      {
-        id: 1,
-        href: '#',
-        text: 'Blockstack Keys'
-      },
-      {
-        id: 2,
-        href: '#',
-        text: 'Solid Keys'
-      },
-      {
-        id: 3,
-        href: '#',
-        text: 'MetaMask (Ethereum) Keys'
-      }
-    ]
-  };
+const { REACT_APP_API_URL, REACT_APP_API_PORT } = process.env;
+const DATA_URL = `${REACT_APP_API_URL}:${REACT_APP_API_PORT}/data`;
 
-  render() {
-    return this.state.data.map(item => (
-      <li
-        className="list-group-item list-group-item-action"
-        key={item.id}
-        style={{
-          cursor: 'pointer'
-        }}
-      >
-        <a href={item.url} alt="Key, passphrase or seed">
-          {item.text}
-        </a>
-      </li>
-    ));
+const styles = {
+  itemsList: {
+    marginTop: 0
+  },
+  item: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
+  },
+  itemContent: {
+    margin: 0
   }
+};
+
+function KeyList() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(DATA_URL)
+      .then(res => res.json())
+      .then(data => setData(data));
+  }, []);
+
+  return (
+    <Accordion>
+      {data &&
+        data.map((project, i) => (
+          <AccordionItem key={i} title={project.title}>
+            {project.content && (
+              <ul
+                className="list-group list-group-flush"
+                style={styles.itemsList}
+              >
+                {project.content.map((contentItem, i) => (
+                  <li className="list-group-item" key={i} style={styles.item}>
+                    <pre style={styles.itemContent}>
+                      {Object.values(contentItem).map(value => `${value}\n`)}
+                    </pre>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </AccordionItem>
+        ))}
+    </Accordion>
+  );
 }
 
 export default KeyList;
