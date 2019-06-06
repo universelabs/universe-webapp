@@ -79,24 +79,11 @@ Install [`npm`](https://www.npmjs.com/get-npm). `npm` is installed and comes bun
 $ brew install node
 ```
 
-Add dependencies for the [Express.js](https://expressjs.com/) server
+Add dependencies for the [Express.js](https://expressjs.com/) server and the [React.js](https://reactjs.org/)/[create-react-app](https://github.com/facebook/create-react-app) client
 
 ```
 $ cd universe-webapp
-$ npm install
-```
-
-Add dependencies for the [React.js](https://reactjs.org/)/[create-react-app](https://github.com/facebook/create-react-app) client
-
-```
-$ cd client
-$ npm install
-```
-
-Go back to the server
-
-```
-$ cd ../
+$ npm install && npm run client-install
 ```
 
 Start both the server and client by running...
