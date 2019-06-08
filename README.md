@@ -79,20 +79,39 @@ Install [`npm`](https://www.npmjs.com/get-npm). `npm` is installed and comes bun
 $ brew install node
 ```
 
-Add dependencies for the [Express.js](https://expressjs.com/) server and the [React.js](https://reactjs.org/)/[create-react-app](https://github.com/facebook/create-react-app) client
+Add dependencies for the [Express.js](https://expressjs.com/) server 
 
 ```
 $ cd universe-webapp
-$ npm install && npm run client-install
+$ npm install
 ```
 
-Start both the server and client by running...
+Add dependencies for the [React.js](https://reactjs.org/)/[create-react-app](https://github.com/facebook/create-react-app) client
 
 ```
-$ npm run dev
+$ cd client
+$ npm install
 ```
 
-The app will and automatically start the Node/Express server on port http://localhost:5000/ as well as the client side server on port http://localhost:3000/. The app will also listen for changes and update automatically.
+Go back to the server
+
+```
+$ cd ..
+```
+
+Start the server by running
+
+```
+$ npm run dev:server
+```
+
+Open a new terminal tab and start the client by running
+
+```
+$ npm run dev:client
+```
+
+The above will automatically open a browser window with the client app on http://localhost:3000/dashboard. There’s also the Node/Express server app running on port 5000, as well as the temporary data server on http://localhost:4000/data. The app will also listen for changes and update automatically. 
 
 ## Contributing
 
