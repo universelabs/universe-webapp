@@ -96,16 +96,22 @@ $ npm install
 Go back to the server
 
 ```
-$ cd ../
+$ cd ..
 ```
 
-Start both the server and client by running...
+Start the server by running
 
 ```
-$ npm run dev
+$ npm run dev:server
 ```
 
-The app will and automatically start the Node/Express server on port http://localhost:5000/ as well as the client side server on port http://localhost:3000/. The app will also listen for changes and update automatically.
+Open a new terminal tab and start the client by running
+
+```
+$ npm run dev:client
+```
+
+The above will automatically open a browser window with the client app on http://localhost:3000/dashboard. There’s also the Node/Express server app running on port 5000, as well as the temporary data server on http://localhost:4000/data. The app will also listen for changes and update automatically.
 
 ## Contributing
 
@@ -144,6 +150,7 @@ Get updates on Universe's development and chat with the project maintainers and 
 - <https://github.com/dantrevino>
 
 **Modestos Kaffes**
+
 - <https://twitter.com/modkaffes>
 - <https://github.com/modkaffes>
 

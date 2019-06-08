@@ -26,11 +26,12 @@
     "server"
   ],
   "scripts": {
-    "client-install": "npm install --prefix client",
     "start": "node server",
     "server": "nodemon server",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "mock-server": "json-server --watch --port 4000 ./api/db.json",
+    "dev:server": "concurrently \"npm:server\" \"npm:mock-server\"",
+    "dev:client": "npm run client",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "dependencies": {
@@ -43,6 +44,7 @@
     "request": "^2.88.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "json-server": "^0.15.0"
   }
 }
