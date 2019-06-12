@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class SignUpForm extends Component {
   render() {
     return (
-      <form action="/subscribe" method="POST">
+      <form action="/signup" method="POST">
         <div className="form-group">
           <label htmlFor="firstName" className="d-none">
             First name
