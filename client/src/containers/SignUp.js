@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Modal from '../components/Modal';
+import SignUpModal from '../components/SignUpModal';
 
 const Background = styled.div`
   background-color: #fff;
@@ -28,7 +28,7 @@ class SignUp extends Component {
           minHeight: '100vh'
         }}
       >
-        <Modal />
+        <SignUpModal />
       </Background>
     );
   }

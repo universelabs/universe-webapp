@@ -3,7 +3,7 @@ import CopyrightUpdate from 'copyright-update';
 import SignUpForm from '../components/SignUpForm';
 import logoWordmark from './../img/universe-wordmark.svg';
 
-class Modal extends Component {
+class SignUpModal extends Component {
   render() {
     return (
       <div className="container-fluid pl-0 pr-0 mb-11">
@@ -153,4 +153,4 @@ class Modal extends Component {
   }
 }
 
-export default Modal;
+export default SignUpModal;
