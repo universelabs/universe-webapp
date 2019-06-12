@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class SignInForm extends Component {
+class LogInForm extends Component {
   render() {
     return (
       <form action="/subscribe" method="POST">
@@ -48,7 +48,7 @@ class SignInForm extends Component {
             role="button"
             tabIndex="4"
           >
-            Sign In
+            Log In
           </a>
         </div>
       </form>
@@ -56,4 +56,4 @@ class SignInForm extends Component {
   }
 }
 
-export default SignInForm;
+export default LogInForm;

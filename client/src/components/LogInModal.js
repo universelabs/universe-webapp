@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import CopyrightUpdate from 'copyright-update';
-import SignInForm from '../components/SignInForm';
+import LogInForm from '../components/LogInForm';
 import logoWordmark from './../img/universe-wordmark.svg';
 
-class SignInModal extends Component {
+class LogInModal extends Component {
   render() {
     return (
       <div className="container-fluid pl-0 pr-0 mb-11">
@@ -14,7 +14,7 @@ class SignInModal extends Component {
             mx-auto 
             d-none 
             d-md-block 
-            mb-4c
+            mb-6
           ">
           <a
             href="/"
@@ -29,12 +29,6 @@ class SignInModal extends Component {
               alt="Universe Labs Logo"
             />
           </a>
-          <div className="text-center">
-            <div className="font-weight-bold mb-1">
-              The easiest way to access the new decentralized internet and
-              crypto.
-            </div>
-          </div>
         </div>
         <div
           className="
@@ -84,28 +78,17 @@ class SignInModal extends Component {
                     style={{
                       fontWeight: '800'
                     }}>
-                    Sign in
+                    Log in
                   </div>
                 </div>
               </div>
-              <SignInForm />
-              <a
-                className="
-                  btn 
-                  btn-link 
-                  btn-subscribe 
-                  btn-block 
-                  mx-auto 
-                  mt-3"
-                href="/sign-up"
-                role="button"
-              >
-                Sign up
-              </a>
-              <div className="text-center mt-6 mb-2">
-                <a className="small font-weight-bold" href="/terms-conditions">
-                  Terms and Conditions
-                </a>
+              <LogInForm />
+              <div className="text-center mt-6 mb-6">
+                <p>Don't have a Universe account?<br />
+                  <a className="font-weight-bold" href="/sign-up">
+                    Sign up
+                  </a>
+                </p>
               </div>
               <div className="text-center small font-weight-bold mb-4">
                 <CopyrightUpdate
@@ -123,4 +106,4 @@ class SignInModal extends Component {
   }
 }
 
-export default SignInModal;
+export default LogInModal;
