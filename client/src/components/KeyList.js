@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Accordion, { AccordionItem } from './Accordion';
+import useClipboard from 'react-hook-clipboard';
 
 const { REACT_APP_API_URL, REACT_APP_API_PORT } = process.env;
 const DATA_URL = `${REACT_APP_API_URL}:${REACT_APP_API_PORT}/data`;
@@ -19,6 +20,7 @@ const styles = {
 
 function KeyList() {
   const [data, setData] = useState([]);
+  const [clipboard, copyToClipboard] = useClipboard();
 
   useEffect(() => {
     fetch(DATA_URL)
@@ -39,7 +41,11 @@ function KeyList() {
                 {project.content.map((contentItem, i) => (
                   <li className="list-group-item" key={i} style={styles.item}>
                     <pre style={styles.itemContent}>
-                      {Object.values(contentItem).map(value => `${value}\n`)}
+                      {Object.values(contentItem).map((value, i) => (
+                        <div key={i} onClick={() => copyToClipboard(value)}>
+                          {value}
+                        </div>
+                      ))}
                     </pre>
                   </li>
                 ))}
