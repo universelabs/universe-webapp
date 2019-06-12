@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SignUp from './containers/SignUp';
+import LogIn from './containers/LogIn';
 import Dashboard from './containers/Dashboard';
 import Contact from './containers/Contact';
 import Help from './containers/Help';
@@ -31,6 +32,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route path="/sign-up" component={SignUp} />
+            <Route path="/log-in" component={LogIn} />
             <Route path="/" component={Dashboard} />
             <Route path="/contact" component={Contact} />
             <Route path="/help" component={Help} />

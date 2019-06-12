@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import SignUpModal from '../components/SignUpModal';
+import LogInModal from '../components/LogInModal';
 
 const Background = styled.div`
   background-color: #fff;
@@ -11,9 +11,9 @@ const Background = styled.div`
 `;
 
 // Using a ES6 class component as it contains state.
-class SignUp extends Component {
+class LogIn extends Component {
   componentDidMount() {
-    document.title = 'Sign up';
+    document.title = 'Log in';
   }
 
   render() {
@@ -28,10 +28,10 @@ class SignUp extends Component {
           minHeight: '100vh'
         }}
       >
-        <SignUpModal />
+        <LogInModal />
       </Background>
     );
   }
 }
 
-export default SignUp;
+export default LogIn;
