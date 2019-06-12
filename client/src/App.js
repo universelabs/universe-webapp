@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import SignUp from './containers/SignUp';
+import SignUpError from './containers/SignUpError';
+import SignUpSuccess from './containers/SignUpSuccess';
 import LogIn from './containers/LogIn';
+import LogInError from './containers/LogInError';
+import LogInSuccess from './containers/LogInSuccess';
 import Dashboard from './containers/Dashboard';
 import Contact from './containers/Contact';
 import Help from './containers/Help';
@@ -32,7 +36,11 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route path="/sign-up" component={SignUp} />
+            <Route path="/signup-error" component={SignUpError} />
+            <Route path="/signup-success" component={SignUpSuccess} />
             <Route path="/log-in" component={LogIn} />
+            <Route path="/login-error" component={LogInError} />
+            <Route path="/login-success" component={LogInSuccess} />
             <Route path="/" component={Dashboard} />
             <Route path="/contact" component={Contact} />
             <Route path="/help" component={Help} />

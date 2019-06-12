@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import SignUpModal from '../components/SignUpModal';
 
@@ -10,28 +10,25 @@ const Background = styled.div`
   }
 `;
 
-// Using a ES6 class component as it contains state.
-class SignUp extends Component {
-  componentDidMount() {
+function SignUp() {
+  useEffect(() => {
     document.title = 'Sign up';
-  }
+  });
 
-  render() {
-    return (
-      <Background
-        className="
+  return (
+    <Background
+      className="
           d-flex 
           mx-auto 
           flex-column 
         "
-        style={{
-          minHeight: '100vh'
-        }}
-      >
-        <SignUpModal />
-      </Background>
-    );
-  }
+      style={{
+        minHeight: '100vh'
+      }}
+    >
+      <SignUpModal />
+    </Background>
+  );
 }
 
 export default SignUp;
