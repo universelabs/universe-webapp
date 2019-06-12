@@ -14,7 +14,7 @@ class LogInModal extends Component {
             mx-auto 
             d-none 
             d-md-block 
-            mb-6
+            mb-4c
           ">
           <a
             href="/"
@@ -29,6 +29,15 @@ class LogInModal extends Component {
               alt="Universe Labs Logo"
             />
           </a>
+          <div className="text-center">
+            <div
+              className="
+                font-weight-bold 
+                mb-1
+              ">
+              Simple key & key asset management
+            </div>
+          </div>
         </div>
         <div
           className="
@@ -63,10 +72,10 @@ class LogInModal extends Component {
                   <div
                     className="
                       font-weight-bold 
-                      mb-1 
+                      mb-4c 
                       d-md-none
                     ">
-                    The easiest way to access the new decentralized internet and crypto.
+                    Simple key & key asset management
                   </div>
                   <div
                     className="
@@ -84,7 +93,7 @@ class LogInModal extends Component {
               </div>
               <LogInForm />
               <div className="text-center mt-6 mb-6">
-                <p>Don't have a Universe account?<br />
+                <p>Don't have an account?<br />
                   <a className="font-weight-bold" href="/sign-up">
                     Sign up
                   </a>

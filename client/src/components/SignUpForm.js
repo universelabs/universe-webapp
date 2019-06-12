@@ -68,7 +68,7 @@ class SignUpForm extends Component {
             role="button"
             tabIndex="4"
           >
-            Get started!
+            Sign up
           </a>
         </div>
       </form>

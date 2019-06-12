@@ -35,8 +35,7 @@ class SignUpModal extends Component {
                 font-weight-bold 
                 mb-1
               ">
-              The easiest way to access the new decentralized internet and
-              crypto.
+              Simple key & key asset management
             </div>
           </div>
         </div>
@@ -77,19 +76,10 @@ class SignUpModal extends Component {
                   <div
                     className="
                       font-weight-bold 
-                      mb-1 
+                      mb-4c 
                       d-md-none
                     ">
-                    The easiest way to access the new decentralized internet and
-                    crypto.
-                  </div>
-                  <div
-                    className="
-                      font-weight-bold 
-                      d-md-none 
-                      mb-4b
-                    ">
-                    Sign up on multiple platforms at once.
+                    Simple key & key asset management
                   </div>
                   <div
                     className="
@@ -101,13 +91,13 @@ class SignUpModal extends Component {
                     style={{
                       fontWeight: '800'
                     }}>
-                    Sign up & start using the NEW internet web 3.0.
+                    Sign up
                   </div>
                 </div>
               </div>
               <SignUpForm />
               <div className="text-center mt-6 mb-6">
-                <p>Already have a Universe accont?<br />
+                <p>Already have an account?<br />
                   <a className="font-weight-bold" href="/log-in">
                     Log in
                   </a>
