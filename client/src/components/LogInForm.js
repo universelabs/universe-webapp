@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class LogInForm extends Component {
   render() {
     return (
-      <form action="/subscribe" method="POST">
+      <form action="/login" method="POST">
         <div className="form-group">
           <label htmlFor="email" className="d-none">
             Email address
