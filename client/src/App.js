@@ -41,7 +41,7 @@ class App extends Component {
             <Route path="/log-in" component={LogIn} />
             <Route path="/login-error" component={LogInError} />
             <Route path="/login-success" component={LogInSuccess} />
-            <Route path="/" component={Dashboard} />
+            <Route path="/dashboard" component={Dashboard} />
             <Route path="/contact" component={Contact} />
             <Route path="/help" component={Help} />
             <Route path="/subscribe" component={Subscribe} />
