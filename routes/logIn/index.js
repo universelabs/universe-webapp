@@ -33,7 +33,7 @@ login.post('/', (req, res) => {
       res.redirect('/login-error');
     } else {
       if (response.statusCode === 200) {
-        res.redirect('/login-success');
+        res.redirect(`/dashboard?user=${email}`);
       } else {
         res.redirect('/login-error');
       }
