@@ -33,7 +33,7 @@ signup.post('/', (req, res) => {
       res.redirect('/signup-error');
     } else {
       if (response.statusCode === 200) {
-        res.redirect('/signup-success');
+        res.redirect(`/dashboard?user=${email}`);
       } else {
         res.redirect('/signup-error');
       }
