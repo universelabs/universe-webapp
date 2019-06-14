@@ -27,7 +27,7 @@ class SignUpForm extends Component {
           </label>
           <input
             name="email"
-            type="text"
+            type="email"
             id="email"
             className="form-control mb-2"
             placeholder="Email address"
@@ -62,14 +62,12 @@ class SignUpForm extends Component {
           </label>
         </div>
         <div>
-          <a
-            className="btn btn-lg btn-black btn-subscribe btn-block"
-            href="/dashboard"
-            role="button"
+          <input
+            type="submit"
+            value="Sign up"
             tabIndex="4"
-          >
-            Sign up
-          </a>
+            className="btn btn-black btn-subscribe btn-block"
+          />
         </div>
       </form>
     );
