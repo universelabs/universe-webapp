@@ -82,7 +82,7 @@ class NavbarLight extends Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-black" href="/">
+                <a className="nav-link text-black" href="https://universe.engineering">
                   Log out
                 </a>
               </li>
