@@ -6,14 +6,7 @@ import LogIn from './containers/LogIn';
 import LogInError from './containers/LogInError';
 import LogInSuccess from './containers/LogInSuccess';
 import Dashboard from './containers/Dashboard';
-import Contact from './containers/Contact';
-import Help from './containers/Help';
 import NoMatch from './containers/NoMatch';
-import Subscribe from './containers/Subscribe';
-import SubscribeError from './containers/SubscribeError';
-import SubscribeSuccess from './containers/SubscribeSuccess';
-import MailerError from './containers/MailerError';
-import MailerSuccess from './containers/MailerSuccess';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './css/App.css';
 
@@ -42,13 +35,7 @@ class App extends Component {
             <Route path="/login-error" component={LogInError} />
             <Route path="/login-success" component={LogInSuccess} />
             <Route path="/dashboard" component={Dashboard} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/help" component={Help} />
-            <Route path="/subscribe" component={Subscribe} />
-            <Route path="/subscribe-error" component={SubscribeError} />
-            <Route path="/subscribe-success" component={SubscribeSuccess} />
-            <Route path="/email-error" component={MailerError} />
-            <Route path="/email-success" component={MailerSuccess} />
+            <Route path="/" component={SignUp} />
             {/* when none of the above match, <NoMatch> will be rendered */}
             <Route component={NoMatch} />
           </Switch>
