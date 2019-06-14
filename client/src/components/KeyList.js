@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Accordion, { AccordionItem } from './Accordion';
 import useClipboard from 'react-hook-clipboard';
 
-const { REACT_APP_API_URL, REACT_APP_API_PORT } = process.env;
-const DATA_URL = `${REACT_APP_API_URL}:${REACT_APP_API_PORT}/data`;
+const { REACT_APP_DATA_SERVER } = process.env;
 
 const styles = {
   itemsList: {
@@ -23,7 +22,7 @@ function KeyList() {
   const [clipboard, copyToClipboard] = useClipboard();
 
   useEffect(() => {
-    fetch(DATA_URL)
+    fetch(`${REACT_APP_DATA_SERVER}/data`)
       .then(res => res.json())
       .then(data => setData(data));
   }, []);
