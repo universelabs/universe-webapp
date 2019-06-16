@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import LogInModal from '../components/LogInModal';
 
@@ -10,28 +10,25 @@ const Background = styled.div`
   }
 `;
 
-// Using a ES6 class component as it contains state.
-class LogIn extends Component {
-  componentDidMount() {
+function LogIn() {
+  useEffect(() => {
     document.title = 'Log in';
-  }
+  });
 
-  render() {
-    return (
-      <Background
-        className="
+  return (
+    <Background
+      className="
           d-flex 
           mx-auto 
           flex-column 
         "
-        style={{
-          minHeight: '100vh'
-        }}
-      >
-        <LogInModal />
-      </Background>
-    );
-  }
+      style={{
+        minHeight: '100vh'
+      }}
+    >
+      <LogInModal />
+    </Background>
+  );
 }
 
 export default LogIn;

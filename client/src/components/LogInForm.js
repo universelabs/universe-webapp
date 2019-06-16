@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 class LogInForm extends Component {
   render() {
     return (
-      <form action="/subscribe" method="POST">
+      <form action="/login" method="POST">
         <div className="form-group">
           <label htmlFor="email" className="d-none">
             Email address
           </label>
           <input
             name="email"
-            type="text"
+            type="email"
             id="email"
             className="form-control mb-2"
             placeholder="Email address"
@@ -42,14 +42,12 @@ class LogInForm extends Component {
           />
         </div>
         <div>
-          <a
-            className="btn btn-lg btn-black btn-subscribe btn-block"
-            href="/dashboard"
-            role="button"
+          <input
+            type="submit"
+            value="Log In"
             tabIndex="4"
-          >
-            Log In
-          </a>
+            className="btn btn-lg btn-black btn-subscribe btn-block"
+          />
         </div>
       </form>
     );
