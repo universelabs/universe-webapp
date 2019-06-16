@@ -20,6 +20,7 @@ const styles = {
 
 function KeyList() {
   const [data, setData] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [clipboard, copyToClipboard] = useClipboard();
   const [email, setEmail] = useState();
 
