@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import queryString from 'query-string';
 import Accordion, { AccordionItem } from './Accordion';
 import useClipboard from 'react-hook-clipboard';
@@ -37,7 +38,7 @@ function KeyList() {
 
   return (
     <Accordion>
-      {data &&
+      {data ? (
         data.map((project, i) => (
           <AccordionItem key={i} title={project.title}>
             {project.content && (
@@ -60,7 +61,10 @@ function KeyList() {
               </ul>
             )}
           </AccordionItem>
-        ))}
+        ))
+      ) : (
+        <FontAwesomeIcon icon="spinner" spin />
+      )}
     </Accordion>
   );
 }
