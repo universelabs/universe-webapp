@@ -24,9 +24,10 @@ const styles = {
     whiteSpace: 'nowrap'
   },
   alert: {
-    zIndex: 2,
+    zIndex: 2000,
     top: 0,
-    right: 0
+    left: 0,
+    position: 'fixed'
   }
 };
 
@@ -59,21 +60,21 @@ function KeyList() {
 
   const handleClick = e => {
     document.execCommand('copy');
-    displayNotification('Copied to clipboard.');
+    displayNotification('Copied to clipboard!');
   };
 
   const displayNotification = text => {
     setAlert(true);
     window.setTimeout(() => {
       setAlert(false);
-    }, 1500);
+    }, 3000);
   };
 
   return (
     <Accordion>
       {alert && (
-        <Alert className="alert-black position-absolute" style={styles.alert}>
-          Copied to clipboard
+        <Alert className="alert alert-primary w-100 text-center fadein-slow-1300 anima-transitiondown-slow font-weight-bold" style={styles.alert}>
+          Copied to clipboard!
         </Alert>
       )}
       {data ? (
