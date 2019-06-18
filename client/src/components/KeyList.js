@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import queryString from 'query-string';
 import Accordion, { AccordionItem } from './Accordion';
+import Alert from './Alert';
 
 const { REACT_APP_DATA_SERVER } = process.env;
 
@@ -21,12 +22,18 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap'
+  },
+  alert: {
+    zIndex: 2,
+    top: 0,
+    right: 0
   }
 };
 
 function KeyList() {
   const [data, setData] = useState();
   const [email, setEmail] = useState();
+  const [alert, setAlert] = useState();
 
   useEffect(() => {
     fetch(`${REACT_APP_DATA_SERVER}/data`)
@@ -52,10 +59,23 @@ function KeyList() {
 
   const handleClick = e => {
     document.execCommand('copy');
+    displayNotification('Copied to clipboard.');
+  };
+
+  const displayNotification = text => {
+    setAlert(true);
+    window.setTimeout(() => {
+      setAlert(false);
+    }, 1500);
   };
 
   return (
     <Accordion>
+      {alert && (
+        <Alert className="alert-black position-absolute" style={styles.alert}>
+          Copied to clipboard
+        </Alert>
+      )}
       {data ? (
         data.map((project, i) => (
           <AccordionItem key={i} title={project.title}>
