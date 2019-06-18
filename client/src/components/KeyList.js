@@ -13,8 +13,14 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis'
   },
-  itemContent: {
+  itemWrapper: {
     margin: 0
+  },
+  itemText: {
+    maxWidth: '100%',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap'
   }
 };
 
@@ -33,6 +39,21 @@ function KeyList() {
     setEmail(queryString.parse(location.search).user);
   }, []);
 
+  const handleMouseEnter = e => {
+    let selection = window.getSelection();
+    let range = document.createRange();
+    range.selectNode(e.currentTarget);
+    selection.addRange(range);
+  };
+
+  const handleMouseOut = () => {
+    window.getSelection().removeAllRanges();
+  };
+
+  const handleClick = e => {
+    document.execCommand('copy');
+  };
+
   return (
     <Accordion>
       {data ? (
@@ -45,11 +66,17 @@ function KeyList() {
               >
                 {project.content.map((contentItem, i) => (
                   <li className="list-group-item" key={i} style={styles.item}>
-                    <pre style={styles.itemContent}>
+                    <pre style={styles.itemWrapper}>
                       {project.title.includes('Blockstack') && `${email}\n`}
                       {Object.values(contentItem).map((value, i) => (
-                          {value}
-                        <div key={i}>
+                        <div style={styles.itemText} key={i}>
+                          <span
+                            onClick={e => handleClick(e)}
+                            onMouseEnter={e => handleMouseEnter(e)}
+                            onMouseOut={handleMouseOut}
+                          >
+                            {value}
+                          </span>
                         </div>
                       ))}
                     </pre>
