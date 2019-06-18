@@ -34,7 +34,7 @@ export const AccordionItem = ({ title, children }) => {
 };
 
 const Accordion = ({ children }) => (
-  <ul className="list-group" style={styles.list}>
+  <ul className="list-group position-relative" style={styles.list}>
     {children}
   </ul>
 );

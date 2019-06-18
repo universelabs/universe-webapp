@@ -4,6 +4,17 @@
 
 // Animations
 
+.fadein-slow-1300 {
+  animation: fade-in 1300ms ease-out forwards;
+  opacity: 0;
+}
+
+.anima-transitiondown-slow {
+  animation: fade-in .2s ease-out forwards;
+  transform: translateY(-.5rem);
+  padding-right: 2rem;
+}
+
 .fadein {
   animation: fade-in 1s ease-out forwards;
   opacity: 0;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import queryString from 'query-string';
 import Accordion, { AccordionItem } from './Accordion';
-import useClipboard from 'react-hook-clipboard';
+import Alert from './Alert';
 
 const { REACT_APP_DATA_SERVER } = process.env;
 
@@ -14,16 +14,27 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis'
   },
-  itemContent: {
+  itemWrapper: {
     margin: 0
+  },
+  itemText: {
+    maxWidth: '100%',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap'
+  },
+  alert: {
+    zIndex: 2000,
+    top: 0,
+    left: 0,
+    position: 'fixed'
   }
 };
 
 function KeyList() {
   const [data, setData] = useState();
-  // eslint-disable-next-line no-unused-vars
-  const [clipboard, copyToClipboard] = useClipboard();
   const [email, setEmail] = useState();
+  const [alert, setAlert] = useState();
 
   useEffect(() => {
     fetch(`${REACT_APP_DATA_SERVER}/data`)
@@ -36,8 +47,36 @@ function KeyList() {
     setEmail(queryString.parse(location.search).user);
   }, []);
 
+  const handleMouseEnter = e => {
+    let selection = window.getSelection();
+    let range = document.createRange();
+    range.selectNode(e.currentTarget);
+    selection.addRange(range);
+  };
+
+  const handleMouseOut = () => {
+    window.getSelection().removeAllRanges();
+  };
+
+  const handleClick = e => {
+    document.execCommand('copy');
+    displayNotification('Copied to clipboard!');
+  };
+
+  const displayNotification = text => {
+    setAlert(true);
+    window.setTimeout(() => {
+      setAlert(false);
+    }, 3000);
+  };
+
   return (
     <Accordion>
+      {alert && (
+        <Alert className="alert alert-primary w-100 text-center fadein-slow-1300 anima-transitiondown-slow font-weight-bold" style={styles.alert}>
+          Copied to clipboard!
+        </Alert>
+      )}
       {data ? (
         data.map((project, i) => (
           <AccordionItem key={i} title={project.title}>
@@ -48,11 +87,17 @@ function KeyList() {
               >
                 {project.content.map((contentItem, i) => (
                   <li className="list-group-item" key={i} style={styles.item}>
-                    <pre style={styles.itemContent}>
+                    <pre style={styles.itemWrapper}>
                       {project.title.includes('Blockstack') && `${email}\n`}
                       {Object.values(contentItem).map((value, i) => (
-                        <div key={i} onClick={() => copyToClipboard(value)}>
-                          {value}
+                        <div style={styles.itemText} key={i}>
+                          <span
+                            onClick={e => handleClick(e)}
+                            onMouseEnter={e => handleMouseEnter(e)}
+                            onMouseOut={handleMouseOut}
+                          >
+                            {value}
+                          </span>
                         </div>
                       ))}
                     </pre>
