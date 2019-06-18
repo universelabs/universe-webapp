@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import queryString from 'query-string';
 import Accordion, { AccordionItem } from './Accordion';
-import useClipboard from 'react-hook-clipboard';
 
 const { REACT_APP_DATA_SERVER } = process.env;
 
@@ -21,8 +20,6 @@ const styles = {
 
 function KeyList() {
   const [data, setData] = useState();
-  // eslint-disable-next-line no-unused-vars
-  const [clipboard, copyToClipboard] = useClipboard();
   const [email, setEmail] = useState();
 
   useEffect(() => {
@@ -51,8 +48,8 @@ function KeyList() {
                     <pre style={styles.itemContent}>
                       {project.title.includes('Blockstack') && `${email}\n`}
                       {Object.values(contentItem).map((value, i) => (
-                        <div key={i} onClick={() => copyToClipboard(value)}>
                           {value}
+                        <div key={i}>
                         </div>
                       ))}
                     </pre>
