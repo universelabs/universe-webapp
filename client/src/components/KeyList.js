@@ -10,8 +10,8 @@ const styles = {
   },
   item: {
     overflow: 'hidden',
-    paddingRight: 0,
-    paddingLeft: 0
+    padding: 0,
+    marginTop: '20px'
   },
   itemWrapper: {
     margin: 0
@@ -91,7 +91,6 @@ function KeyList() {
                               paddingRight: '15px',
                               paddingBottom: '15px',
                               paddingLeft: '15px',
-                              marginTop: '-2px',
                               fontSize: '16px',
                               borderRadius: '6px'
                             }}

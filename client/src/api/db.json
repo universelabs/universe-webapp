@@ -1,7 +1,7 @@
 [
   {
     "slug": "blockstack",
-    "title": "Blockstack Keys",
+    "title": "Blockstack",
     "content": [
       {
         "Blockstack ID": "universedemo.id.blockstack",
@@ -12,7 +12,7 @@
   },
   {
     "slug": "bitcoin",
-    "title": "Bitcoin Address",
+    "title": "Bitcoin",
     "content": [
       {
         "Key": "112d4EMx9Ej7uFWJhYzffCEH8Lxb1LcH9i"
@@ -21,7 +21,7 @@
   },
   {
     "slug": "ethereum",
-    "title": "Ethereum Address",
+    "title": "Ethereum",
     "content": [
       {
         "Key": "0xee3bac7e9d6795d10a6ffeeb91efc18c3398f4af"
