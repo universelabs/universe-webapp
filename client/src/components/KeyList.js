@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import queryString from 'query-string';
 import Accordion, { AccordionItem } from './Accordion';
 import Alert from './Alert';
-
-const { REACT_APP_DATA_SERVER } = process.env;
+import data from '../api/db.json';
 
 const styles = {
   itemsList: {
@@ -31,15 +30,8 @@ const styles = {
 };
 
 function KeyList() {
-  const [data, setData] = useState();
   const [email, setEmail] = useState();
   const [alert, setAlert] = useState();
-
-  useEffect(() => {
-    fetch(`${REACT_APP_DATA_SERVER}/data`)
-      .then(res => res.json())
-      .then(data => setData(data));
-  }, []);
 
   useEffect(() => {
     // eslint-disable-next-line no-restricted-globals
