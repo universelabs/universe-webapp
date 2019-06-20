@@ -12,7 +12,9 @@ const styles = {
   },
   item: {
     overflow: 'hidden',
-    textOverflow: 'ellipsis'
+    textOverflow: 'ellipsis',
+    paddingRight: 0,
+    paddingLeft: 0
   },
   itemWrapper: {
     margin: 0
