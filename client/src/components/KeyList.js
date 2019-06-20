@@ -93,15 +93,16 @@ function KeyList() {
                 {project.content.map((contentItem, i) => (
                   <li className="list-group-item" key={i} style={styles.item}>
                     <pre style={styles.itemWrapper}>
-                      {project.title.includes('Blockstack') && `${email}\n`}
-                      {Object.values(contentItem).map((value, i) => (
+                      {Object.entries(contentItem).map((item, i) => (
                         <div style={styles.itemText} key={i}>
+                          <span>{item[0]}: </span>
                           <span
                             onClick={e => handleClick(e)}
                             onMouseEnter={e => handleMouseEnter(e)}
                             onMouseOut={handleMouseOut}
                           >
-                            {value}
+                            {project.title.includes('Blockstack') && item[0].includes('Email') && email}
+                            {item[1]}
                           </span>
                         </div>
                       ))}
