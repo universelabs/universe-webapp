@@ -38,6 +38,7 @@ function KeyList() {
   }, []);
 
   const handleMouseEnter = e => {
+    window.getSelection().removeAllRanges();
     let selection = window.getSelection();
     let range = document.createRange();
     range.selectNode(e.currentTarget);
@@ -50,6 +51,7 @@ function KeyList() {
 
   const handleClick = e => {
     document.execCommand('copy');
+    window.getSelection().removeAllRanges();
     displayNotification('Copied to clipboard!');
   };
 
