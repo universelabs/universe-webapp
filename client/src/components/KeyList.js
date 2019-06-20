@@ -73,7 +73,10 @@ function KeyList() {
   return (
     <Accordion>
       {alert && (
-        <Alert className="alert alert-primary w-100 text-center fadein-slow-1300 anima-transitiondown-slow font-weight-bold" style={styles.alert}>
+        <Alert
+          className="alert alert-primary w-100 text-center fadein-slow-1300 anima-transitiondown-slow font-weight-bold"
+          style={styles.alert}
+        >
           Copied to clipboard!
         </Alert>
       )}
