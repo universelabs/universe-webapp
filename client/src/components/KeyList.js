@@ -12,16 +12,15 @@ const styles = {
   },
   item: {
     overflow: 'hidden',
-    textOverflow: 'ellipsis'
+    paddingRight: 0,
+    paddingLeft: 0
   },
   itemWrapper: {
     margin: 0
   },
   itemText: {
     maxWidth: '100%',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'initial'
   },
   alert: {
     zIndex: 2000,
@@ -73,7 +72,10 @@ function KeyList() {
   return (
     <Accordion>
       {alert && (
-        <Alert className="alert alert-primary w-100 text-center fadein-slow-1300 anima-transitiondown-slow font-weight-bold" style={styles.alert}>
+        <Alert
+          className="alert alert-primary w-100 text-center fadein-slow-1300 anima-transitiondown-slow font-weight-bold"
+          style={styles.alert}
+        >
           Copied to clipboard!
         </Alert>
       )}
@@ -88,15 +90,16 @@ function KeyList() {
                 {project.content.map((contentItem, i) => (
                   <li className="list-group-item" key={i} style={styles.item}>
                     <pre style={styles.itemWrapper}>
-                      {project.title.includes('Blockstack') && `${email}\n`}
-                      {Object.values(contentItem).map((value, i) => (
+                      {Object.entries(contentItem).map((item, i) => (
                         <div style={styles.itemText} key={i}>
+                          <span>{item[0]}: </span>
                           <span
                             onClick={e => handleClick(e)}
                             onMouseEnter={e => handleMouseEnter(e)}
                             onMouseOut={handleMouseOut}
                           >
-                            {value}
+                            {project.title.includes('Blockstack') && item[0].includes('Email') && email}
+                            {item[1]}
                           </span>
                         </div>
                       ))}

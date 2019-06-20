@@ -5,14 +5,14 @@
       "title": "Blockstack Key Assets",
       "content": [
         {
-          "email": "user@email1.com",
-          "passphrase": "passphrase1",
-          "id": "blockstack.id1"
+          "Blockstack ID": "blockstack.id1",
+          "Email address": null,
+          "Passphrase/Recovery": "passphrase1"
         },
         {
-          "email": "user@email2.com",
-          "passphrase": "passphrase2",
-          "id": "blockstack.id2"
+          "Blockstack ID": "blockstack.id2",
+          "Email address": null,
+          "Passphrase/Recovery": "passphrase2"
         }
       ]
     },
@@ -21,7 +21,7 @@
       "title": "Bitcoin Address",
       "content": [
         {
-          "key": "112d4EMx9Ej7uFWJhYzffCEH8Lxb1LcH9i"
+          "Key": "112d4EMx9Ej7uFWJhYzffCEH8Lxb1LcH9i"
         }
       ]
     },
@@ -30,7 +30,7 @@
       "title": "Ethereum Address",
       "content": [
         {
-          "key": "0xee3bac7e9d6795d10a6ffeeb91efc18c3398f4af"
+          "Key": "0xee3bac7e9d6795d10a6ffeeb91efc18c3398f4af"
         }
       ]
     }
