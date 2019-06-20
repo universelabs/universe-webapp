@@ -16,10 +16,6 @@ const styles = {
   itemWrapper: {
     margin: 0
   },
-  itemText: {
-    maxWidth: '100%',
-    whiteSpace: 'initial'
-  },
   alert: {
     zIndex: 2000,
     top: 0,
@@ -82,21 +78,30 @@ function KeyList() {
               >
                 {project.content.map((contentItem, i) => (
                   <li className="list-group-item" key={i} style={styles.item}>
-                    <pre style={styles.itemWrapper}>
+                    <div style={styles.itemWrapper}>
                       {Object.entries(contentItem).map((item, i) => (
                         <div style={styles.itemText} key={i}>
-                          <span>{item[0]}: </span>
                           <span
                             onClick={e => handleClick(e)}
                             onMouseEnter={e => handleMouseEnter(e)}
                             onMouseOut={handleMouseOut}
+                            className="d-block list-item-hover"
+                            style={{
+                              paddingTop: '12px',
+                              paddingRight: '15px',
+                              paddingBottom: '15px',
+                              paddingLeft: '15px',
+                              marginTop: '-2px',
+                              fontSize: '16px',
+                              borderRadius: '6px'
+                            }}
                           >
                             {project.title.includes('Blockstack') && item[0].includes('Email') && email}
                             {item[1]}
                           </span>
                         </div>
                       ))}
-                    </pre>
+                    </div>
                   </li>
                 ))}
               </ul>

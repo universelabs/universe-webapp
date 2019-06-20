@@ -1,3 +1,31 @@
 // List group
 
 @import "node_modules/bootstrap/scss/list-group";
+
+li.list-group-item {
+  background-color: transparent;
+}
+
+li.list-group-item-action {
+  color: #000;
+  transition: color .2s ease-in-out, 
+  background-color .2s ease-in-out, 
+  border-color .2s ease-in-out, 
+  box-shadow .2s ease-in-out;
+  background-color: #fff;
+}
+
+.list-group-item-action:nth-child(1) {
+  color: #fff;
+  background-color: #1700C4;
+}
+
+.list-group-item-action:hover, 
+.list-group-item-action:focus {
+  color: #fff!important;
+  background-color: #1700C4;
+}
+
+.d-block.list-item-hover:hover {
+  background-color: #1D00F7;
+}
