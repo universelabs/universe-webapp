@@ -79,7 +79,7 @@ function KeyList() {
           Copied to clipboard!
         </Alert>
       )}
-      {data ? (
+      {data && (
         data.map((project, i) => (
           <AccordionItem key={i} title={project.title}>
             {project.content && (
@@ -110,8 +110,6 @@ function KeyList() {
             )}
           </AccordionItem>
         ))
-      ) : (
-        <FontAwesomeIcon icon="spinner" spin />
       )}
     </Accordion>
   );
