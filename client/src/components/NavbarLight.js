@@ -66,12 +66,14 @@ class NavbarLight extends Component {
               </a>
             </Div>
             <ul className="navbar-nav ml-auto">
+              
+              {/*
               <li className="nav-item">
                 <a className="nav-link text-black" href="/dashboard">
                   Dashboard
                 </a>
               </li>
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <a className="nav-link disabled" href="/">
                   Settings
                 </a>

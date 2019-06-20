@@ -2,7 +2,7 @@
   "data": [
     {
       "slug": "blockstack",
-      "title": "Blockstack Keys",
+      "title": "Blockstack Key Assets",
       "content": [
         {
           "email": "user@email1.com",
@@ -17,32 +17,20 @@
       ]
     },
     {
-      "slug": "solid",
-      "title": "Solid Keys",
+      "slug": "bitcoin",
+      "title": "Bitcoin Address",
       "content": [
         {
-          "key": "Solid key 1"
-        },
-        {
-          "key": "Solid key 2"
-        },
-        {
-          "key": "Solid key 3"
+          "key": "112d4EMx9Ej7uFWJhYzffCEH8Lxb1LcH9i"
         }
       ]
     },
     {
       "slug": "ethereum",
-      "title": "Ethereum Keys",
+      "title": "Ethereum Address",
       "content": [
         {
-          "key": "Ethereum key 1"
-        },
-        {
-          "key": "Ethereum key 2"
-        },
-        {
-          "key": "Ethereum key 3"
+          "key": "0xee3bac7e9d6795d10a6ffeeb91efc18c3398f4af"
         }
       ]
     }
