@@ -24,13 +24,31 @@ class Dashboard extends Component {
         <Alert
           size=""
           color="alert-danger"
-          className="text-center"
+          className="text-center font-weight-bold"
           style={{
             marginBottom: 0
           }}
         >
-          <strong>WARNING:</strong> Product in Alpha - <strong>DO NOT</strong>{' '}
-          store more than <strong>$10</strong> on your keys.
+          <span
+            style={{
+              fontWeight: '900'
+            }}>
+            WARNING:
+          </span> 
+            Product in Alpha - 
+          <span
+            style={{
+              fontWeight: '900'
+            }}>
+            DO NOT
+          </span>{' '}
+          store more than 
+          <span
+            style={{
+              fontWeight: '900'
+            }}>
+            $10
+          </span> on your keys.
         </Alert>
         <NavbarLight
           colorScheme="
@@ -50,10 +68,12 @@ class Dashboard extends Component {
               text-left 
               mb-8 pb-8"
           >
-            <h3 className="mt-5 mt-md-7 mb-3 mb-md-4">Your Keys</h3>
-            <p className="mb-4b">
-              Your keys for your various platforms are below.
-            </p>
+            <h4 className="mt-5 mt-md-7 mb-3 mb-md-4"
+              style={{
+                fontWeight: '900'
+              }}>
+              Your Keys
+            </h4>
             <div className="list-group">
               <KeyList />
             </div>
