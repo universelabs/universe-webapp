@@ -12,7 +12,6 @@ const styles = {
   },
   item: {
     overflow: 'hidden',
-    textOverflow: 'ellipsis',
     paddingRight: 0,
     paddingLeft: 0
   },
@@ -21,9 +20,7 @@ const styles = {
   },
   itemText: {
     maxWidth: '100%',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'initial'
   },
   alert: {
     zIndex: 2000,
