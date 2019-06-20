@@ -17,7 +17,7 @@ li.list-group-item-action {
 
 .list-group-item-action:nth-child(1) {
   color: #fff;
-  background-color: #1700C4;
+  background-color: #000;
 }
 
 .list-group-item-action:hover, 
@@ -26,6 +26,6 @@ li.list-group-item-action {
   background-color: #1700C4;
 }
 
-.d-block.list-item-hover:hover {
+.list-item-hover:hover {
   background-color: #1D00F7;
 }
