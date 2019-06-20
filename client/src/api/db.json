@@ -1,17 +1,12 @@
 [
   {
     "slug": "blockstack",
-    "title": "Blockstack Key Assets",
+    "title": "Blockstack Keys",
     "content": [
       {
-        "Blockstack ID": "blockstack.id1",
+        "Blockstack ID": "universedemo.id.blockstack",
         "Email address": null,
-        "Passphrase/Recovery": "passphrase1"
-      },
-      {
-        "Blockstack ID": "blockstack.id2",
-        "Email address": null,
-        "Passphrase/Recovery": "passphrase2"
+        "Passphrase": "economy language puppy blame reflect ask lunch also surround sun exhibit depend"
       }
     ]
   },
