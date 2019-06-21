@@ -1,31 +1,33 @@
-[
-  {
-    "slug": "blockstack",
-    "title": "Blockstack",
-    "content": [
-      {
-        "Blockstack ID": "universedemo.id.blockstack",
-        "Email address": null,
-        "Passphrase": "economy language puppy blame reflect ask lunch also surround sun exhibit depend"
-      }
-    ]
-  },
-  {
-    "slug": "bitcoin",
-    "title": "Bitcoin",
-    "content": [
-      {
-        "Key": "112d4EMx9Ej7uFWJhYzffCEH8Lxb1LcH9i"
-      }
-    ]
-  },
-  {
-    "slug": "ethereum",
-    "title": "Ethereum",
-    "content": [
-      {
-        "Key": "0xee3bac7e9d6795d10a6ffeeb91efc18c3398f4af"
-      }
-    ]
-  }
-] 
+{
+  "data": [
+    {
+      "slug": "blockstack",
+      "title": "Blockstack",
+      "content": [
+        {
+          "Blockstack ID": "universedemo.id.blockstack",
+          "Email address": null,
+          "Passphrase": "economy language puppy blame reflect ask lunch also surround sun exhibit depend"
+        }
+      ]
+    },
+    {
+      "slug": "bitcoin",
+      "title": "Bitcoin",
+      "content": [
+        {
+          "Key": "112d4EMx9Ej7uFWJhYzffCEH8Lxb1LcH9i"
+        }
+      ]
+    },
+    {
+      "slug": "ethereum",
+      "title": "Ethereum",
+      "content": [
+        {
+          "Key": "0xee3bac7e9d6795d10a6ffeeb91efc18c3398f4af"
+        }
+      ]
+    }
+  ]
+}
