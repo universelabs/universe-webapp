@@ -94,7 +94,7 @@ class LogInModal extends Component {
               <LogInForm />
               <div className="text-center mt-6 mb-6">
                 <p>Don't have an account?<br />
-                  <a className="font-weight-bold" href="/sign-up">
+                  <a className="font-weight-bold" href="/signup">
                     Sign up
                   </a>
                 </p>

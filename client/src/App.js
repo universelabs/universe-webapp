@@ -28,10 +28,10 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route path="/sign-up" component={SignUp} />
+            <Route path="/signup" component={SignUp} />
             <Route path="/signup-error" component={SignUpError} />
             <Route path="/signup-success" component={SignUpSuccess} />
-            <Route path="/log-in" component={LogIn} />
+            <Route path="/login" component={LogIn} />
             <Route path="/login-error" component={LogInError} />
             <Route path="/login-success" component={LogInSuccess} />
             <Route path="/dashboard" component={Dashboard} />

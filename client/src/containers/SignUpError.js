@@ -31,7 +31,7 @@ function SignUpError() {
               </p>
               <a
                 className="btn btn-primary btn-subscribe mx-auto"
-                href="/sign-up"
+                href="/signup"
                 role="button"
                 tabIndex="1"
               >

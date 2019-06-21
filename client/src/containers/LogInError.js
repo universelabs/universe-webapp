@@ -31,7 +31,7 @@ function LogInError() {
               </p>
               <a
                 className="btn btn-primary btn-subscribe mx-auto"
-                href="/log-in"
+                href="/login"
                 role="button"
                 tabIndex="1"
               >
