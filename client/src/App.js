@@ -7,7 +7,7 @@ import LogInError from './containers/LogInError';
 import LogInSuccess from './containers/LogInSuccess';
 import Dashboard from './containers/Dashboard';
 import NoMatch from './containers/NoMatch';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import './css/App.css';
 
 class App extends Component {
@@ -35,7 +35,9 @@ class App extends Component {
             <Route path="/login-error" component={LogInError} />
             <Route path="/login-success" component={LogInSuccess} />
             <Route path="/dashboard" component={Dashboard} />
-            <Route path="/" component={SignUp} />
+            <Route path="/">
+              <Redirect to="/dashboard" />
+            </Route>
             {/* when none of the above match, <NoMatch> will be rendered */}
             <Route component={NoMatch} />
           </Switch>
