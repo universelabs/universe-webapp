@@ -28,15 +28,11 @@ signup.post('/', (req, res) => {
     body: postData
   };
 
-  request(options, (err, response, body) => {
-    if (err) {
-      res.redirect('/signup-error');
+  request(options, (error, response, body) => {
+    if (response.statusCode === 200) {
+      res.send(body)
     } else {
-      if (response.statusCode === 200) {
-        res.redirect(`/dashboard?user=${email}`);
-      } else {
-        res.redirect('/signup-error');
-      }
+      res.redirect('/signup-error');
     }
   });
 });
