@@ -22,7 +22,7 @@ const styles = {
 };
 
 export const AccordionItem = ({ title, children }) => {
-  const [expanded, setExpanded] = useState(title.includes('Blockstack'));
+  const [expanded, setExpanded] = useState();
 
   return (
     <li className="list-group-item list-group-item-action" style={styles.item}>
