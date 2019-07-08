@@ -1,12 +1,27 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
+import { withRouter } from 'react-router-dom';
+import { useMappedState } from 'redux-react-hook';
 import NavbarLight from '../components/NavbarLight';
 import KeyList from '../components/KeyList';
 import Alert from '../components/Alert';
 
-function Dashboard() {
+function Dashboard({ history }) {
   useEffect(() => {
     document.title = 'Keys';
   });
+
+  const mapState = useCallback(
+    state => ({
+      authUser: state.sessionState.authUser
+    }),
+    []
+  );
+
+  const { authUser } = useMappedState(mapState);
+
+  if (!authUser) {
+    history.push('/login');
+  }
 
   return (
     <div
@@ -80,7 +95,7 @@ function Dashboard() {
             Your Keys
           </h4>
           <div className="list-group">
-            <KeyList />
+            <KeyList user={authUser} />
           </div>
         </div>
       </div>
@@ -88,4 +103,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default withRouter(Dashboard);
