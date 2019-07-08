@@ -1,4 +1,8 @@
 import React from 'react';
+import { useDispatch } from 'redux-react-hook';
+import { withRouter } from 'react-router-dom';
+import * as actions from '../constants/actions';
+
 import styled from 'styled-components';
 import NavbarTogglerLight from '../components/NavbarTogglerLight';
 import logoWordmarkDark from './../img/universe-wordmark.svg';
@@ -17,7 +21,21 @@ const Div = styled.div`
   height: 45px;
 `;
 
-function NavbarLight({ style, colorScheme }) {
+function NavbarLight({ style, colorScheme, history }) {
+  const dispatch = useDispatch();
+
+  function logout(e) {
+    e.preventDefault();
+
+    dispatch({
+      type: actions.SET_AUTH_USER,
+      authUser: null
+    });
+
+    localStorage.removeItem('token');
+    return history.push('/login');
+  }
+
   return (
     <Nav className={`navbar navbar-expand-md ${colorScheme}`} style={style}>
       <div className="container">
@@ -79,14 +97,11 @@ function NavbarLight({ style, colorScheme }) {
               </a>
             </li> */}
             <li className="nav-item">
-              <a
-                className="nav-link text-black"
-                href="https://universe.engineering"
-              >
+              <a className="nav-link text-black" href="/" onClick={logout}>
                 Log out
               </a>
             </li>
-            <li className="nav-item d-md-none">
+            {/* <li className="nav-item d-md-none">
               <a
                 className="
                   btn 
@@ -98,7 +113,7 @@ function NavbarLight({ style, colorScheme }) {
               >
                 Subscribe
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
@@ -106,4 +121,4 @@ function NavbarLight({ style, colorScheme }) {
   );
 }
 
-export default NavbarLight;
+export default withRouter(NavbarLight);
