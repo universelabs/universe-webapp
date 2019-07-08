@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SignUp from './containers/SignUp';
 import SignUpError from './containers/SignUpError';
 import SignUpSuccess from './containers/SignUpSuccess';
@@ -10,41 +10,27 @@ import NoMatch from './containers/NoMatch';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import './css/App.css';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-    this.connecToServer = this.connecToServer.bind(this);
-  }
-  connecToServer() {
-    fetch('/');
-  }
-  componentDidMount() {
-    this.connecToServer();
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <BrowserRouter>
-          <Switch>
-            <Route path="/signup" component={SignUp} />
-            <Route path="/signup-error" component={SignUpError} />
-            <Route path="/signup-success" component={SignUpSuccess} />
-            <Route path="/login" component={LogIn} />
-            <Route path="/login-error" component={LogInError} />
-            <Route path="/login-success" component={LogInSuccess} />
-            <Route path="/dashboard" component={Dashboard} />
-            <Route path="/">
-              <Redirect to="/dashboard" />
-            </Route>
-            {/* when none of the above match, <NoMatch> will be rendered */}
-            <Route component={NoMatch} />
-          </Switch>
-        </BrowserRouter>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Switch>
+          <Route path="/signup" component={SignUp} />
+          <Route path="/signup-error" component={SignUpError} />
+          <Route path="/signup-success" component={SignUpSuccess} />
+          <Route path="/login" component={LogIn} />
+          <Route path="/login-error" component={LogInError} />
+          <Route path="/login-success" component={LogInSuccess} />
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/">
+            <Redirect to="/dashboard" />
+          </Route>
+          {/* when none of the above match, <NoMatch> will be rendered */}
+          <Route component={NoMatch} />
+        </Switch>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
