@@ -21,7 +21,6 @@ function SignUpForm({ history }) {
       const res = await data;
 
       if (res.error) {
-        console.error(data.error);
         return history.push('/signup-error');
       }
 
@@ -40,7 +39,6 @@ function SignUpForm({ history }) {
       }
     } catch (error) {
       setLoading(false);
-      console.error(error);
     }
   }
 
