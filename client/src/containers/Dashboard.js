@@ -1,87 +1,106 @@
-import React, { Component } from 'react';
+import React, { useEffect, useCallback } from 'react';
+import { withRouter } from 'react-router-dom';
+import { useMappedState } from 'redux-react-hook';
 import NavbarLight from '../components/NavbarLight';
 import KeyList from '../components/KeyList';
 import Alert from '../components/Alert';
 
-class Dashboard extends Component {
-  componentDidMount() {
+function Dashboard({ history }) {
+  useEffect(() => {
     document.title = 'Keys';
+  });
+
+  const mapState = useCallback(
+    state => ({
+      authUser: state.sessionState.authUser
+    }),
+    []
+  );
+
+  const { authUser } = useMappedState(mapState);
+
+  if (!authUser) {
+    history.push('/login');
   }
 
-  render() {
-    return (
-      <div
-        className="
+  return (
+    <div
+      className="
           d-flex 
           w-100 
           h-100 
           mx-auto 
           flex-column"
+      style={{
+        backgroundColor: '#FAFAFA'
+      }}
+    >
+      <Alert
+        size=""
+        color="alert-danger"
+        className="text-center font-weight-bold"
         style={{
-          backgroundColor: '#FAFAFA'
+          marginBottom: 0
         }}
       >
-        <Alert
-          size=""
-          color="alert-danger"
-          className="text-center font-weight-bold"
+        <span
           style={{
-            marginBottom: 0
+            fontWeight: '900'
           }}
         >
-          <span
-            style={{
-              fontWeight: '900'
-            }}>
-            WARNING:
-          </span> 
-            Product in Alpha - 
-          <span
-            style={{
-              fontWeight: '900'
-            }}>
-            DO NOT
-          </span>{' '}
-          store more than 
-          <span
-            style={{
-              fontWeight: '900'
-            }}>
-            $10
-          </span> on your keys.
-        </Alert>
-        <NavbarLight
-          colorScheme="
+          WARNING:
+        </span>
+        Product in Alpha -
+        <span
+          style={{
+            fontWeight: '900'
+          }}
+        >
+          DO NOT
+        </span>{' '}
+        store more than
+        <span
+          style={{
+            fontWeight: '900'
+          }}
+        >
+          $10
+        </span>{' '}
+        on your keys.
+      </Alert>
+      <NavbarLight
+        colorScheme="
             navbar-light 
             bg-light 
             bg-white"
-        />
+      />
+      <div
+        style={{
+          marginLeft: '6px',
+          marginRight: '6px'
+        }}
+      >
         <div
-          style={{
-            marginLeft: '6px',
-            marginRight: '6px'
-          }}
-        >
-          <div
-            className="
+          className="
               container 
               text-left 
               mb-8 pb-8"
+        >
+          <h4
+            className="mt-5 mt-md-7 mb-3 mb-md-4"
+            style={{
+              fontWeight: '900'
+            }}
           >
-            <h4 className="mt-5 mt-md-7 mb-3 mb-md-4"
-              style={{
-                fontWeight: '900'
-              }}>
-              Your Keys
-            </h4>
-            <div className="list-group">
-              <KeyList />
-            </div>
+            Your Keys
+          </h4>
+          <div className="list-group">
+            <KeyList user={authUser} />
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-export default Dashboard;
+export default withRouter(Dashboard);
