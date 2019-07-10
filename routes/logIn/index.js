@@ -39,6 +39,7 @@ login.post('/', (req, res) => {
         res.send({
           error: response.statusMessage
         });
+        break;
       default:
         // Catchall error so the client redir to /login-error
         res.send({
