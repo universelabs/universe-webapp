@@ -21,7 +21,6 @@ function LogInForm({ history }) {
       const res = await data;
 
       if (res.error) {
-        console.error(res.error);
         return history.push('/login-error');  
       }
 
@@ -40,7 +39,6 @@ function LogInForm({ history }) {
       }
     } catch (error) {
       setLoading(false);
-      console.error(error);
     }
   }
 
