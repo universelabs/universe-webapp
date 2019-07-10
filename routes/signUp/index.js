@@ -8,7 +8,6 @@ signup.post('/', (req, res) => {
   // Validation
   if (!email) {
     res.redirect('/signup-error');
-    return;
   }
 
   // Construct req data
