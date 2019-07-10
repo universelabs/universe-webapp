@@ -28,15 +28,22 @@ signup.post('/', (req, res) => {
     body: postData
   };
 
-  request(options, (err, response, body) => {
-    if (err) {
-      res.redirect('/signup-error');
-    } else {
-      if (response.statusCode === 200) {
-        res.redirect(`/dashboard?user=${email}`);
-      } else {
-        res.redirect('/signup-error');
-      }
+  request(options, (error, response, body) => {
+    // TODO: Check what are all the possible responses from the auth server
+    // and restrict res to only those, manually returning only needed data
+    // eg. on 200 {"token": "…"}, on 422 {"error": "Email in use"} etc
+    switch (response.statusCode) {
+      case 200:
+        res.send(body);
+        break;
+      case 422:
+        res.send(body);
+        break;
+      default:
+        // Catchall error so the client redir to /signup-error
+        res.send({
+          error: true
+        });
     }
   });
 });

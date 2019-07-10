@@ -1,4 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { useDispatch } from 'redux-react-hook';
+import { withRouter } from 'react-router-dom';
+import * as actions from '../constants/actions';
+
 import styled from 'styled-components';
 import NavbarTogglerLight from '../components/NavbarTogglerLight';
 import logoWordmarkDark from './../img/universe-wordmark.svg';
@@ -17,96 +21,104 @@ const Div = styled.div`
   height: 45px;
 `;
 
-class NavbarLight extends Component {
-  render() {
-    return (
-      <Nav
-        className={`navbar navbar-expand-md ${this.props.colorScheme}`}
-        style={this.props.style}
-      >
-        <div className="container">
-          <a className="navbar-brand d-flex align-items-center" href="/">
-            <img
-              src={logoWordmarkDark}
-              className="navbar-brand-img"
-              alt="Universe Logo"
-            />
-          </a>
-          <NavbarTogglerLight
-            className="
-              d-flex 
-              align-items-right 
-              navbar-toggler-dark"
+function NavbarLight({ style, colorScheme, history }) {
+  const dispatch = useDispatch();
+
+  function logout(e) {
+    e.preventDefault();
+
+    dispatch({
+      type: actions.SET_AUTH_USER,
+      authUser: null
+    });
+
+    localStorage.removeItem('token');
+    return history.push('/login');
+  }
+
+  return (
+    <Nav className={`navbar navbar-expand-md ${colorScheme}`} style={style}>
+      <div className="container">
+        <a className="navbar-brand d-flex align-items-center" href="/">
+          <img
+            src={logoWordmarkDark}
+            className="navbar-brand-img"
+            alt="Universe Logo"
           />
-          <div className="collapse navbar-collapse" id="navbarBasicLight">
-            <Div
+        </a>
+        <NavbarTogglerLight
+          className="
+            d-flex 
+            align-items-right 
+            navbar-toggler-dark"
+        />
+        <div className="collapse navbar-collapse" id="navbarBasicLight">
+          <Div
+            className="
+              container 
+              d-flex 
+              align-items-center 
+              justify-content-center 
+              d-md-none"
+          >
+            <a
               className="
-                container 
+                navbar-brand 
                 d-flex 
                 align-items-center 
-                justify-content-center 
-                d-md-none"
+                justify-content-center"
+              href="/"
+              style={{
+                marginRight: 0
+              }}
             >
+              <img
+                src={logoWordmarkDark}
+                className="navbar-brand-img"
+                alt="Universe Logo"
+              />
+            </a>
+          </Div>
+          <ul className="navbar-nav ml-auto">
+            {/*
+            <li className="nav-item">
+              <a className="nav-link text-black" href="/dashboard">
+                Dashboard
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link disabled" href="/">
+                Settings
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-black" href="/help">
+                Help
+              </a>
+            </li> */}
+            <li className="nav-item">
+              <a className="nav-link text-black" href="/" onClick={logout}>
+                Log out
+              </a>
+            </li>
+            {/* <li className="nav-item d-md-none">
               <a
                 className="
-                  navbar-brand 
-                  d-flex 
-                  align-items-center 
-                  justify-content-center"
-                href="/"
-                style={{
-                  marginRight: 0
-                }}
+                  btn 
+                  btn-sm 
+                  btn-outline-black 
+                  rounded-pill 
+                  nav-button"
+                href="/subscribe"
               >
-                <img
-                  src={logoWordmarkDark}
-                  className="navbar-brand-img"
-                  alt="Universe Logo"
-                />
+                Subscribe
               </a>
-            </Div>
-            <ul className="navbar-nav ml-auto">
-              
-              {/*
-              <li className="nav-item">
-                <a className="nav-link text-black" href="/dashboard">
-                  Dashboard
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled" href="/">
-                  Settings
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-black" href="/help">
-                  Help
-                </a>
-              </li> */}
-              <li className="nav-item">
-                <a className="nav-link text-black" href="https://universe.engineering">
-                  Log out
-                </a>
-              </li>
-              <li className="nav-item d-md-none">
-                <a
-                  className="
-                    btn 
-                    btn-sm 
-                    btn-outline-black 
-                    rounded-pill 
-                    nav-button"
-                  href="/subscribe"
-                >
-                  Subscribe
-                </a>
-              </li>
-            </ul>
-          </div>
+            </li> */}
+          </ul>
         </div>
-      </Nav>
-    );
-  }
+      </div>
+    </Nav>
+  );
 }
 
-export default NavbarLight;
+export default withRouter(NavbarLight);

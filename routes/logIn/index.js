@@ -28,15 +28,22 @@ login.post('/', (req, res) => {
     body: postData
   };
 
-  request(options, (err, response, body) => {
-    if (err) {
-      res.redirect('/login-error');
-    } else {
-      if (response.statusCode === 200) {
-        res.redirect(`/dashboard?user=${email}`);
-      } else {
-        res.redirect('/login-error');
-      }
+  request(options, (error, response, body) => {
+    // TODO: Check what are all the possible responses from the auth server
+    // and restrict res to only those, returning the corresponding data.
+    switch (response.statusCode) {
+      case 200:
+        res.send(body);
+        break;
+      case 401:
+        res.send({
+          error: response.statusMessage
+        });
+      default:
+        // Catchall error so the client redir to /login-error
+        res.send({
+          error: true
+        });
     }
   });
 });

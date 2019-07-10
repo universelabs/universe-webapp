@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import queryString from 'query-string';
+import React, { useState } from 'react';
 import Accordion, { AccordionItem } from './Accordion';
 import Alert from './Alert';
 import data from '../api/db.json';
@@ -24,14 +23,8 @@ const styles = {
   }
 };
 
-function KeyList() {
-  const [email, setEmail] = useState();
+function KeyList({ user = {} }) {
   const [alert, setAlert] = useState();
-
-  useEffect(() => {
-    // eslint-disable-next-line no-restricted-globals
-    setEmail(queryString.parse(location.search).user);
-  }, []);
 
   const handleMouseEnter = e => {
     window.getSelection().removeAllRanges();
@@ -68,7 +61,7 @@ function KeyList() {
           Copied to clipboard!
         </Alert>
       )}
-      {data && (
+      {data &&
         data.map((project, i) => (
           <AccordionItem key={i} title={project.title}>
             {project.content && (
@@ -95,7 +88,10 @@ function KeyList() {
                               borderRadius: '6px'
                             }}
                           >
-                            {project.title.includes('Blockstack') && item[0].includes('Email') && email}
+                            {project.title.includes('Blockstack') &&
+                              item[0].includes('Email') &&
+                              user &&
+                              user.email}
                             {item[1]}
                           </span>
                         </div>
@@ -106,8 +102,7 @@ function KeyList() {
               </ul>
             )}
           </AccordionItem>
-        ))
-      )}
+        ))}
     </Accordion>
   );
 }
