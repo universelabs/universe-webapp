@@ -16,11 +16,8 @@ function SignUpForm({ history }) {
   async function postSignUp() {
     try {
       setLoading(true);
-      const { data } = await axios.post(
-        `${process.env.REACT_APP_EXPRESS_SERVER}/signup`,
-        values
-      );
 
+      const { data } = await axios.post('/signup', values);
       const res = await data;
 
       if (res.error) {
