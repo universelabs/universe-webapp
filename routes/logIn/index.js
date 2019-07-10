@@ -8,7 +8,6 @@ login.post('/', (req, res) => {
   // Validation
   if (!email) {
     res.redirect('/login-error');
-    return;
   }
 
   // Construct req data
