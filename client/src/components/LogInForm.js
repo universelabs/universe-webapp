@@ -22,7 +22,7 @@ function LogInForm({ history }) {
 
       if (res.error) {
         console.error(res.error);
-        return history.push('/signup-error');  
+        return history.push('/login-error');  
       }
 
       if (res.token) {

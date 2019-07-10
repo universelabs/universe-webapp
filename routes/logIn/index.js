@@ -8,7 +8,6 @@ login.post('/', (req, res) => {
   // Validation
   if (!email) {
     res.redirect('/login-error');
-    return;
   }
 
   // Construct req data
@@ -39,6 +38,7 @@ login.post('/', (req, res) => {
         res.send({
           error: response.statusMessage
         });
+        break;
       default:
         // Catchall error so the client redir to /login-error
         res.send({
