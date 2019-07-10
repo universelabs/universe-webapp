@@ -17,11 +17,7 @@ function LogInForm({ history }) {
     try {
       setLoading(true);
 
-      const { data } = await axios.post(
-        `${process.env.REACT_APP_EXPRESS_SERVER}/login`,
-        values
-      );
-      
+      const { data } = await axios.post('/login', values);
       const res = await data;
 
       if (res.error) {

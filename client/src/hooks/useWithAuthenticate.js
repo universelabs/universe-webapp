@@ -7,10 +7,7 @@ async function authenticate(dispatch) {
   const token = localStorage.getItem('token');
 
   if (!!token) {
-    const { data } = await axios.post(
-      `${process.env.REACT_APP_EXPRESS_SERVER}/verify`,
-      { token }
-    );
+    const { data } = await axios.post('/verify', { token });
     const res = await data;
 
     if (res.user) {
