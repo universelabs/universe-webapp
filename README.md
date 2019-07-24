@@ -102,13 +102,13 @@ $ cd ..
 Start the server by running
 
 ```
-$ npm run dev-server
+$ npm run server
 ```
 
 Open a new terminal tab and start the client by running
 
 ```
-$ npm run dev-client
+$ npm run client
 ```
 
 The above will automatically open a browser window with the client app on http://localhost:3000/dashboard. There’s also the Node/Express server app running on port 5000. The app will also listen for changes and update automatically.
