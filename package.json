@@ -29,9 +29,6 @@
     "start": "node server",
     "server": "nodemon server",
     "client": "npm start --prefix client",
-    "mock-server": "json-server --watch --port 4000 ./api/db.json",
-    "dev-server": "concurrently \"npm:server\" \"npm:mock-server\"",
-    "dev-client": "npm run client",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "dependencies": {
