@@ -99,6 +99,27 @@ Go back to the server
 $ cd ..
 ```
 
+For local development, you also need either a) a local, or b) a deployed instance of the [auth-server](https://github.com/universelabs/universe-auth)(visit its repo for setup instructions).
+
+In either case, you need a `config/dev.js` file which will hold the environment variable for `auth-server`. First create the file by running
+```
+$ touch config/dev.js
+```
+Then,
+
+a) If you are running the `auth-server` locally, you should edit `config/dev.js` to contain its local address and port, eg.:
+```
+module.exports = {
+  authServer: 'https://localhost:5001'
+};
+```
+b) If you want to use a deployed `auth-server`, you should edit `config/dev.js` to contain its domain, eg.:
+```
+module.exports = {
+  authServer: 'https://auth.example.com'
+};
+```
+
 Start the server by running
 
 ```
