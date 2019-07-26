@@ -99,19 +99,41 @@ Go back to the server
 $ cd ..
 ```
 
+For local development, besides `universe-webapp` you have to use either a) an online instance of the [universe-auth](https://github.com/universelabs/universe-auth) server (visit its repo for setup instructions), or b) a local instance of the `auth-server`.
+
+In either case, you need a `config/dev.js` file which will hold the environment variable for `auth-server`. First create the file by running
+```
+$ touch config/dev.js
+```
+Then,
+
+a) If you’re using the online `auth-server`, you should edit `config/dev.js` to contain its domain, eg.:
+```
+module.exports = {
+  authServer: 'https://auth.universe.engineering'
+};
+```
+
+a) If you are running the `auth-server` locally, you should edit `config/dev.js` to contain its local address and port, eg.:
+```
+module.exports = {
+  authServer: 'https://localhost:5000'
+};
+```
+
 Start the server by running
 
 ```
-$ npm run dev-server
+$ npm run server
 ```
 
 Open a new terminal tab and start the client by running
 
 ```
-$ npm run dev-client
+$ npm run client
 ```
 
-The above will automatically open a browser window with the client app on http://localhost:3000/dashboard. There’s also the Node/Express server app running on port 5000, as well as the temporary data server on http://localhost:4000/data. The app will also listen for changes and update automatically.
+The above will automatically open a browser window with the client app on http://localhost:3000/dashboard. There’s also the Node/Express server app running on port 4000. The app will also listen for changes and update automatically.
 
 ## Contributing
 
