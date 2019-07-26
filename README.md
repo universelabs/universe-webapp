@@ -100,7 +100,7 @@ $ cd ..
 ```
 
 The `universe-webapp` requires users to run an instance of the [universe-auth](https://github.com/universelabs/universe-auth) server.
-- [Required: Visit the repository for instructions on how to run the Authentication Server](https://github.com/universelabs/universe-auth).
+- [**Required**: To run the app you MUST also run the Authentication Server. Visit the repository for instructions on how to run it](https://github.com/universelabs/universe-auth).
 
 Next, you will need a `config/dev.js` file to hold the environment variable for `universe-auth` server. First create the file by running
 ```
