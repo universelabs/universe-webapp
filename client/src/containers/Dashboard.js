@@ -7,7 +7,7 @@ import Alert from '../components/Alert';
 
 function Dashboard({ history }) {
   useEffect(() => {
-    document.title = 'Keys';
+    document.title = 'Keys – Universe';
   });
 
   const mapState = useCallback(
