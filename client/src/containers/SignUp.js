@@ -12,7 +12,7 @@ const Background = styled.div`
 
 function SignUp() {
   useEffect(() => {
-    document.title = 'Sign up';
+    document.title = 'Sign up – Universe';
   });
 
   return (

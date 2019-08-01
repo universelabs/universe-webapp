@@ -5,7 +5,7 @@ import Alert from '../components/Alert';
 
 class Help extends Component {
   componentDidMount() {
-    document.title = 'Help';
+    document.title = 'Help – Universe';
   }
 
   render() {

@@ -5,7 +5,7 @@ import Alert from '../components/Alert';
 
 class Dashboard extends Component {
   componentDidMount() {
-    document.title = 'Dashboard';
+    document.title = 'Dashboard – Universe';
   }
 
   render() {
