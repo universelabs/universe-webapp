@@ -57,7 +57,7 @@
 
 ## Status
 
-[![Slack](https://img.shields.io/badge/Community-Join_the_Slack!-purple.svg?colorA=212121&colorB=3f46ad)](https://join.slack.com/t/universelabs/shared_invite/enQtNDQ0MjY3NDI5MTkwLTIzMWQ4M2U3MGQ3ZDY5MzM5MGQ5ZDM1MDZjNTgwNGI5NDdiNDY4ZDQyNWI2NjEzZmU3NzVmOTYwYzEzYzc1ZDE
+[![Slack](https://img.shields.io/badge/Community-Join_the_Slack!-purple.svg?colorA=212121&colorB=3f46ad)](https://join.slack.com/t/universelabs/shared_invite/enQtNDQ0MjY3NDI5MTkwLTIzMWQ4M2U3MGQ3ZDY5MzM5MGQ5ZDM1MDZjNTgwNGI5NDdiNDY4ZDQyNWI2NjEzZmU3NzVmOTYwYzEzYzc1ZDE)
 [![universe-webapp version](https://img.shields.io/badge/dynamic/json.svg?label=Version&url=https%3A%2F%2Fraw.githubusercontent.com%2Funiverselabs%2Funiverse-webapp%2Fmaster%2Fclient%2Fpackage.json&query=%24.version&colorA=%23212121&colorB=%2300BB00)](https://github.com/universelabs/universe-webapp/blob/master/client/package.json)
 [![dependencies status](https://img.shields.io/david/universelabs/universe-webapp.svg?label=dependencies&colorA=%23212121)](https://david-dm.org/universelabs/universe-webapp)
 [![devDependencies status](https://img.shields.io/david/dev/universelabs/universe-webapp.svg?label=devDependencies&colorA=%23212121)](https://david-dm.org/universelabs/universe-webapp?type=dev)
@@ -78,7 +78,7 @@ $ cd universe-webapp
 $ npm install
 ```
 
-Add dependencies for [React.js](https://reactjs.org/)/[create-react-app](https://github.com/facebook/create-react-app) client
+Install dependencies for [React.js](https://reactjs.org/)/[create-react-app](https://github.com/facebook/create-react-app) client
 
 ```
 $ cd client
