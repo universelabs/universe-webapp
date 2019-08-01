@@ -57,10 +57,8 @@
 
 ## Status
 
-[![Slack](https://img.shields.io/badge/Community-Join_the_Slack!-purple.svg?colorA=212121&colorB=3f46ad)](https://join.slack.com/t/universelabs/shared_invite/enQtNDQ0MjY3NDI5MTkwLTIzMWQ4M2U3MGQ3ZDY5MzM5MGQ5ZDM1MDZjNTgwNGI5NDdiNDY4ZDQyNWI2NjEzZmU3NzVmOTYwYzEzYzc1ZDE)
-
+[![Slack](https://img.shields.io/badge/Community-Join_the_Slack!-purple.svg?colorA=212121&colorB=3f46ad)](https://join.slack.com/t/universelabs/shared_invite/enQtNDQ0MjY3NDI5MTkwLTIzMWQ4M2U3MGQ3ZDY5MzM5MGQ5ZDM1MDZjNTgwNGI5NDdiNDY4ZDQyNWI2NjEzZmU3NzVmOTYwYzEzYzc1ZDE
 [![universe-webapp version](https://img.shields.io/badge/dynamic/json.svg?label=Version&url=https%3A%2F%2Fraw.githubusercontent.com%2Funiverselabs%2Funiverse-webapp%2Fmaster%2Fclient%2Fpackage.json&query=%24.version&colorA=%23212121&colorB=%2300BB00)](https://github.com/universelabs/universe-webapp/blob/master/client/package.json)
-[![Build status](https://img.shields.io/circleci/project/github/universelabs/universe-webapp.svg?label=Build+status&colorA=%23212121)](https://circleci.com/gh/universelabs/universe-webapp)
 [![dependencies status](https://img.shields.io/david/universelabs/universe-webapp.svg?label=dependencies&colorA=%23212121)](https://david-dm.org/universelabs/universe-webapp)
 [![devDependencies status](https://img.shields.io/david/dev/universelabs/universe-webapp.svg?label=devDependencies&colorA=%23212121)](https://david-dm.org/universelabs/universe-webapp?type=dev)
 [![Repository Size](https://img.shields.io/github/repo-size/universelabs/universe-webapp.svg?label=Repository+Size&colorA=%23212121&colorB=%23007BFF)](https://github.com/universelabs/universe-webapp)
@@ -73,20 +71,14 @@ Quickly start by cloning the repository to your local machine
 $ git clone git@github.com:universelabs/universe-webapp.git
 ```
 
-Install [`npm`](https://www.npmjs.com/get-npm). `npm` is installed and comes bundled with [Node.js](https://nodejs.org/en/download/package-manager/)
-
-```
-$ brew install node
-```
-
-Add dependencies for the [Express.js](https://expressjs.com/) server
+Install dependencies for [Express.js](https://expressjs.com/) server
 
 ```
 $ cd universe-webapp
 $ npm install
 ```
 
-Add dependencies for the [React.js](https://reactjs.org/)/[create-react-app](https://github.com/facebook/create-react-app) client
+Add dependencies for [React.js](https://reactjs.org/)/[create-react-app](https://github.com/facebook/create-react-app) client
 
 ```
 $ cd client
@@ -96,11 +88,11 @@ $ npm install
 Go back to the server
 
 ```
-$ cd ..
+$ cd ../
 ```
 
 The `universe-webapp` requires users to run an instance of the [universe-auth](https://github.com/universelabs/universe-auth) server.
-- [**Required**: To run the app you MUST also run the Authentication Server. Visit the repository for instructions on how to run it](https://github.com/universelabs/universe-auth).
+- [To run the app you MUST also run the Authentication Server. Visit the repository for instructions on how to run it](https://github.com/universelabs/universe-auth).
 
 Next, you will need a `config/dev.js` file to hold the environment variable for `universe-auth` server. First create the file by running
 ```
