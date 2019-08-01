@@ -54,7 +54,7 @@ function App() {
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/feather" component={Feather} />
           <Route exact path="/pair" component={Pair} />
-          <Route exact path="/feather/instructions" component={FeatherInstructions} />
+          <Route exact path="/feather/instructions/:user(new|returning)" component={FeatherInstructions} />
           <Route exact path="/">
             <Redirect to="/dashboard" />
           </Route>
