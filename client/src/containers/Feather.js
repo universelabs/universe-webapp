@@ -9,7 +9,7 @@ function Feather() {
         <strong>Your Universe Feather device is not connected.</strong>
         <p>
           Please follow the setup instructions that came with your device or{' '}
-          <a href="#">click here</a> for instructions.
+          <a href="/feather/instructions">click here</a> for instructions.
         </p>
       </div>
     </div>
