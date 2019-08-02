@@ -2,21 +2,20 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 import 'jquery-ui-dist/jquery-ui.min.js';
 
-// Value equal to `.collapsing` class is set to none.
-
-$(document).ready(function() {
-  $('button').click(function() {
-    $('#navbarBasic').animate(
-      {
-        opacity: 'toggle',
-        backgroundColor: '#000'
-      },
-      300
-    );
-  });
-});
-
 class NavbarToggler extends Component {
+  componentDidMount() {
+    $('button').click(function() {
+      // Value equal to `.collapsing` class is set to none.
+      $('#navbarBasic').animate(
+        {
+          opacity: 'toggle',
+          backgroundColor: '#000'
+        },
+        300
+      );
+    });
+  }
+
   render() {
     return (
       <button
