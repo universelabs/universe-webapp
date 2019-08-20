@@ -1,5 +1,5 @@
 <div align="center">
-  <h3>Universe Web App</h3>
+  <h3>Universe Key Management Web App</h3>
   <p>
     Universe is a custody network for cryptocurrency and the decentralized web.
     <br/>
