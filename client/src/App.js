@@ -9,6 +9,9 @@ import LogIn from './containers/LogIn';
 import LogInError from './containers/LogInError';
 import LogInSuccess from './containers/LogInSuccess';
 import Dashboard from './containers/Dashboard';
+import Feather from './containers/Feather';
+import Pair from './containers/Pair';
+import FeatherInstructions from './containers/FeatherInstructions';
 import NoMatch from './containers/NoMatch';
 import './css/App.css';
 
@@ -49,6 +52,9 @@ function App() {
           <Route path="/login-error" component={LogInError} />
           <Route path="/login-success" component={LogInSuccess} />
           <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/feather" component={Feather} />
+          <Route exact path="/pair" component={Pair} />
+          <Route exact path="/feather/instructions/:user(new|returning)" component={FeatherInstructions} />
           <Route exact path="/">
             <Redirect to="/dashboard" />
           </Route>
