@@ -12,6 +12,7 @@ import Dashboard from './containers/Dashboard';
 import Feather from './containers/Feather';
 import Pair from './containers/Pair';
 import FeatherInstructions from './containers/FeatherInstructions';
+import FeatherConnected from './containers/FeatherConnected';
 import NoMatch from './containers/NoMatch';
 import './css/App.css';
 
@@ -55,6 +56,7 @@ function App() {
           <Route exact path="/feather" component={Feather} />
           <Route exact path="/pair" component={Pair} />
           <Route exact path="/feather/instructions/:user(new|returning)" component={FeatherInstructions} />
+          <Route exact path="/feather/connected/:user(new|returning)" component={FeatherConnected} />
           <Route exact path="/">
             <Redirect to="/dashboard" />
           </Route>
