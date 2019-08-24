@@ -1,7 +1,7 @@
 <div align="center">
   <h3>Universe key management web app</h3>
   <p>
-    Universe is a decentralized custody network for crypto assets & decentralized web.
+    Universe is a decentralized login platform for Web 2 and Web 3.
     <br/>
     <a href="https://universe.engineering">
       <strong>universe.engineering</strong>
