@@ -1,7 +1,7 @@
 <div align="center">
   <h3>Universe key management web app</h3>
   <p>
-    Universe is a decentralized login platform for Web 2 and Web 3.
+    Universe key management web app allows users to manage their keys and other assets.
     <br/>
     <a href="https://universe.engineering">
       <strong>universe.engineering</strong>
