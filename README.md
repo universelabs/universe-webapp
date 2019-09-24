@@ -4,15 +4,15 @@
     Universe key management web app allows users to manage their keys and other assets.
     <br/>
     <a href="https://universe.engineering">
-      <strong>universe.engineering</strong>
+      Universe Labs' mission is to become the largest decentralized login and decentralized private key recovery protocol.
     </a>
   </p>
   <p>
-    <a href="https://github.com/universelabs/universe-webapp/issues/new?labels=&template=bug_report.md" alt="Report a Bug (universe.engineering)">
+    <a href="https://github.com/universelabs/universe-webapp/issues/new?labels=&template=bug_report.md" alt="Report a Bug">
       Report bug
     </a>
     &middot;
-    <a href="https://github.com/universelabs/universe-webapp/issues/new?labels=&template=feature_request.md" alt="Request feature (universe.engineering)">
+    <a href="https://github.com/universelabs/universe-webapp/issues/new?labels=&template=feature_request.md" alt="Request feature">
       Request feature
     </a>
     &middot;
@@ -20,17 +20,16 @@
       Medium
     </a>
     &middot;
-    <a href="https://join.slack.com/t/universelabs/shared_invite/enQtNDQ0MjY3NDI5MTkwLTIzMWQ4M2U3MGQ3ZDY5MzM5MGQ5ZDM1MDZjNTgwNGI5NDdiNDY4ZDQyNWI2NjEzZmU3NzVmOTYwYzEzYzc1ZDE">
+    <a href="https://join.slack.com/t/universelabs/shared_invite/enQtNjA2MjM1NjAyNzI0LTUyYWZjM2I5M2VhMTU3YTY3ZGI0YTAwNDQwN2I1Mzc4Yjk3YTg2Y2IxOGMyMDljOTdkM2Y4NTM3ZTAwYzc3NTg">
       Slack
     </a>
     <br/>
     <br/>
     <a href="https://twitter.com/intent/follow?screen_name=universelabs">
-      <img src="https://img.shields.io/twitter/url/https/twitter.com/universelabs.svg?style=social&label=Follow%20%40universelabs&logo=twitter" alt="follow on Twitter" />
-    </a>
-    &middot;
-    <a href="https://github.com/universelabs/universe-webapp/stargazers">
-      <img src="https://img.shields.io/github/stars/universelabs/universe-webapp.svg?style=social&label=Star&maxAge=2592000" alt="Star Repo" />
+      <img src="https://img.shields.io/twitter/url/https/twitter.com/universelabs.svg?style=social&label=Follow%20%40universelabs&logo=twitter
+      " alt="follow on**Jacob Gadakian** Twitter" />
+      - <https://twitter.com/gadikian>
+    **Jacob Gadakian**
     </a>
   </p>
 </div>
@@ -54,7 +53,7 @@
 - [Roadmap](#roadmap)
 - [Community](#community)
 - [Maintainers](#maintainers)
-- [License](#license)
+Universe Labs' mission is to become the largest decentralized login and decentralized private key recovery protocol.
 
 ## Quick start
 
@@ -65,14 +64,12 @@
 
 ## Status
 
-[![Slack](https://img.shields.io/badge/Community-Join_the_Slack!-purple.svg?colorA=212121&colorB=3f46ad)](https://join.slack.com/t/universelabs/shared_invite/enQtNDQ0MjY3NDI5MTkwLTIzMWQ4M2U3MGQ3ZDY5MzM5MGQ5ZDM1MDZjNTgwNGI5NDdiNDY4ZDQyNWI2NjEzZmU3NzVmOTYwYzEzYzc1ZDE)
+[![Slack](https://img.shields.io/badge/Community-Join_the_Slack!-purple.svg?colorA=212121&colorB=3f46ad)](https://join.slack.com/t/universelabs/shared_invite/enQtNjA2MjM1NjAyNzI0LTUyYWZjM2I5M2VhMTU3YTY3ZGI0YTAwNDQwN2I1Mzc4Yjk3YTg2Y2IxOGMyMDljOTdkM2Y4NTM3ZTAwYzc3NTg)
 [![universe-webapp version](https://img.shields.io/badge/dynamic/json.svg?label=Version&url=https%3A%2F%2Fraw.githubusercontent.com%2Funiverselabs%2Funiverse-webapp%2Fmaster%2Fclient%2Fpackage.json&query=%24.version&colorA=%23212121&colorB=%23FF0000)](https://github.com/universelabs/universe-webapp/blob/master/client/package.json)
-[![Repository Size](https://img.shields.io/github/repo-size/universelabs/universe-webapp.svg?label=Repository+Size&colorA=%23212121&colorB=%23007BFF)](https://github.com/universelabs/universe-webapp)
-
-## Getting started
-
-Quickly start by cloning the repository to your local machine
-
+[![Repository Size](https://img.shields.io/github/repo-size/universelabs/universe-webapp.svg?label=Repository+Size&colorA=%23212121&colorB=%23007BFF)](
+https://github.com/universelabs/**Jacob Gadakian**universe-webapp)
+- <https://twitter.com/gadikian>
+- <https://twitter.com/gadikian>
 ```
 $ git clone git@github.com:universelabs/universe-webapp.git
 ```
@@ -135,7 +132,7 @@ must include relevant unit tests. All code should conform to the [Code Guideline
 
 ## Roadmap
 
-Universe Labs' mission is to become the largest open source node and key management network.
+Universe Labs' mission is to become the largest decentralized login and decentralized private key recovery protocol.
 
 [› Universe Roadmap](https://github.com/universelabs/universe/blob/master/ROADMAP.md)
 
@@ -148,7 +145,7 @@ Get updates on Universe's development and chat with the project maintainers and 
 - Subscribe to the [Universe Newsletter](http://universe.engineering/subscribe)
 - [Star the repo](https://github.com/universelabs/universe/stargazers)
 - Follow [@universelabs](https://twitter.com/universelabs) on Twitter.
-- Join the official Universe [Slack](https://join.slack.com/t/universelabs/shared_invite/enQtNDQ0MjY3NDI5MTkwLTIzMWQ4M2U3MGQ3ZDY5MzM5MGQ5ZDM1MDZjNTgwNGI5NDdiNDY4ZDQyNWI2NjEzZmU3NzVmOTYwYzEzYzc1ZDE).
+- Join the official Universe [Slack](https://join.slack.com/t/universelabs/shared_invite/enQtNjA2MjM1NjAyNzI0LTUyYWZjM2I5M2VhMTU3YTY3ZGI0YTAwNDQwN2I1Mzc4Yjk3YTg2Y2IxOGMyMDljOTdkM2Y4NTM3ZTAwYzc3NTg).
 
 ## Maintainers
 
@@ -157,10 +154,9 @@ Get updates on Universe's development and chat with the project maintainers and 
 - <https://twitter.com/guylepage3>
 - <https://github.com/guylepage3>
 
-**Modestos Kaffes**
-
-- <https://twitter.com/modkaffes>
-- <https://github.com/modkaffes>
+**Jacob Gadakian**
+- <https://twitter.com/gadikian>
+- <https://github.com/faddat>
 
 ## License
 
