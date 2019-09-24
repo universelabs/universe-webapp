@@ -26,10 +26,11 @@
     <br/>
     <br/>
     <a href="https://twitter.com/intent/follow?screen_name=universelabs">
-      <img src="https://img.shields.io/twitter/url/https/twitter.com/universelabs.svg?style=social&label=Follow%20%40universelabs&logo=twitter
-      " alt="follow on**Jacob Gadakian** Twitter" />
-      - <https://twitter.com/gadikian>
-    **Jacob Gadakian**
+      <img src="https://img.shields.io/twitter/url/https/twitter.com/universelabs.svg?style=social&label=Follow%20%40universelabs&logo=twitter" alt="follow on Twitter" />
+    </a>
+    &middot;
+    <a href="https://github.com/universelabs/universe-webapp/stargazers">
+      <img src="https://img.shields.io/github/stars/universelabs/universe-webapp.svg?style=social&label=Star&maxAge=2592000" alt="Star Repo" />
     </a>
   </p>
 </div>
@@ -66,10 +67,12 @@
 
 [![Slack](https://img.shields.io/badge/Community-Join_the_Slack!-purple.svg?colorA=212121&colorB=3f46ad)](https://join.slack.com/t/universelabs/shared_invite/enQtNjA2MjM1NjAyNzI0LTUyYWZjM2I5M2VhMTU3YTY3ZGI0YTAwNDQwN2I1Mzc4Yjk3YTg2Y2IxOGMyMDljOTdkM2Y4NTM3ZTAwYzc3NTg)
 [![universe-webapp version](https://img.shields.io/badge/dynamic/json.svg?label=Version&url=https%3A%2F%2Fraw.githubusercontent.com%2Funiverselabs%2Funiverse-webapp%2Fmaster%2Fclient%2Fpackage.json&query=%24.version&colorA=%23212121&colorB=%23FF0000)](https://github.com/universelabs/universe-webapp/blob/master/client/package.json)
-[![Repository Size](https://img.shields.io/github/repo-size/universelabs/universe-webapp.svg?label=Repository+Size&colorA=%23212121&colorB=%23007BFF)](
-https://github.com/universelabs/**Jacob Gadakian**universe-webapp)
-- <https://twitter.com/gadikian>
-- <https://twitter.com/gadikian>
+[![Repository Size](https://img.shields.io/github/repo-size/universelabs/universe-webapp.svg?label=Repository+Size&colorA=%23212121&colorB=%23007BFF)](https://github.com/universelabs/universe-webapp)
+
+## Getting started
+
+Quickly start by cloning the repository to your local machine
+
 ```
 $ git clone git@github.com:universelabs/universe-webapp.git
 ```
