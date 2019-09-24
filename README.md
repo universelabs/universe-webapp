@@ -4,7 +4,7 @@
     Universe key management web app allows users to manage their keys and other assets.
     <br/>
     <a href="https://universe.engineering">
-      Universe Labs' mission is to become the largest decentralized login and decentralized private key recovery protocol.
+      <strong>universe.engineering</strong>
     </a>
   </p>
   <p>
@@ -53,7 +53,7 @@
 - [Roadmap](#roadmap)
 - [Community](#community)
 - [Maintainers](#maintainers)
-Universe Labs' mission is to become the largest decentralized login and decentralized private key recovery protocol.
+- [License](#license)
 
 ## Quick start
 
